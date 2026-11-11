@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>I-Cheri - Industrial Chemistry Regulation Learning Hub by Lia Indah</title>
+  <meta name="description" content="I-Cheri: Industrial Chemistry Regulation Learning Hub by Lia Indah. Understand the standards, Build Laboratory Competence. Belajar regulasi industri makanan (BPOM), lingkungan, mineral, mikrobiologi, kosmetik, dan B3.">
+  
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,600;1,700&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Top Sticky Navigation Bar -->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <div class="brand-wrapper" onclick="window.ICHERI.navigateTo('home')">
+        <div class="brand-logo-icon">
+          <!-- Flask & Molecule SVG -->
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M10 2v7.31L4.69 19.3A2 2 0 0 0 6.44 22h11.12a2 2 0 0 0 1.75-2.7L14 9.31V2"/>
+            <path d="M8.5 2h7"/>
+            <path d="M7 16h10"/>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <h1>I-Cheri <span>Hub</span></h1>
+          <div class="author-badge">by <strong>Lia Indah</strong></div>
+        </div>
+      </div>
+
+      <!-- Navigation Stepper -->
+      <nav class="stepper-nav" aria-label="Alur Pembelajaran">
+        <button class="step-item active" data-step="home">
+          <span class="step-num">1</span> Beranda
+        </button>
+        <button class="step-item" data-step="sectors">
+          <span class="step-num">2</span> Pilihan Bidang
+        </button>
+        <button class="step-item" data-step="module">
+          <span class="step-num">3</span> Modul Regulasi
+        </button>
+        <button class="step-item" data-step="quiz">
+          <span class="step-num">4</span> Kuis Pemahaman
+        </button>
+        <button class="step-item" data-step="evaluation">
+          <span class="step-num">5</span> Evaluasi
+        </button>
+      </nav>
+
+      <!-- Nav Quick Actions -->
+      <div class="nav-actions">
+        <button class="btn btn-soft-blue" onclick="window.ICHERI.navigateTo('sectors')">
+          Pilih Bidang
+        </button>
+        <button class="btn btn-primary" onclick="window.ICHERI.openModule('pangan')">
+          Mulai Belajar ➔
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Wrapper -->
+  <main class="container">
+
+    <!-- ========================================================
+         PAGE 1: BERANDA / LANDING PAGE
+         ======================================================== -->
+    <section id="page-home" class="page-view active">
+      <!-- Hero Section -->
+      <div class="hero-section">
+        <div class="hero-glow-1"></div>
+        <div class="hero-glow-2"></div>
+        <div class="hero-content">
+          <div class="hero-pill">
+            <span class="dot"></span>
+            Industrial Chemistry Regulation Learning Hub
+          </div>
+          <h1 class="hero-title">
+            I-Cheri: Kuasai Regulasi Industri, <span class="accent-red">Bangun Akurasi Laboratorium.</span>
+          </h1>
+          <div class="hero-jargon">
+            Understand the standards, Build Laboratory Competence
+          </div>
+          <p class="hero-desc">
+            Platform pembelajaran regulasi kimia dan laboratorium industri terpadu karya <strong>Lia Indah</strong>. Dirancang khusus untuk mahasiswa, analis laboratorium, dan praktisi industri guna memahami persyaratan hukum, batas baku mutu analitik, serta tata kelola mutu laboratorium secara terstruktur, komprehensif, dan mudah dipahami.
+          </p>
+          <div class="hero-actions">
+            <button class="btn btn-primary" onclick="window.ICHERI.navigateTo('sectors')">
+              Jelajahi Pilihan Bidang Regulasi ➔
+            </button>
+            <button class="btn btn-soft-red" onclick="window.ICHERI.startQuizForSector('pangan')">
+              Uji Pemahaman Kuis Cepat ✍️
+            </button>
+          </div>
+
+          <div class="hero-meta-strip">
+            <div class="meta-item">
+              <div class="meta-icon-box">🏛️</div>
+              <span>Multi-Regulator (BPOM, KLHK, ESDM, Kemenaker)</span>
+            </div>
+            <div class="meta-item">
+              <div class="meta-icon-box">🔬</div>
+              <span>Standar Lab ISO/IEC 17025 & GLP</span>
+            </div>
+            <div class="meta-item">
+              <div class="meta-icon-box">📊</div>
+              <span>Kuis Interaktif & Remedial Otomatis</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature Highlights -->
+      <div class="section-header">
+        <span class="section-tag">Fitur Utama Platform</span>
+        <h2 class="section-title">Mengapa Belajar Regulasi di I-Cheri?</h2>
+        <p class="section-subtitle">
+          Regulasi industri seringkali dianggap rumit dan penuh pasal tebal. I-Cheri menyederhanakannya menjadi alur terstruktur yang aplikatif bagi analis laboratorium.
+        </p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon blue">📚</div>
+          <h3>Terstruktur Lintas Sektor Industri</h3>
+          <p>Mencakup industri pangan (BPOM), laboratorium lingkungan (KLHK), mineral pertambangan (ESDM), biosafety mikrobiologi, kosmetik (CPKB), hingga keselamatan bahan B3.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon red">🎯</div>
+          <h3>Parameter & Batas Baku Mutu Jelas</h3>
+          <p>Lengkap dengan instrumen analitik (AAS, HPLC, GC-MS, XRF), metode standar rujukan (SNI, AOAC, ASTM, USEPA), serta limit konsentrasi kritis yang wajib diawasi.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon blue">🔍</div>
+          <h3>Studi Kasus & Tindakan Korektif (CAPA)</h3>
+          <p>Pelajari kasus nyata deviasi pengujian industri kimia, identifikasi akar masalah (Root Cause Analysis), dan solusi pemecahannya secara profesional.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon red">🧠</div>
+          <h3>Kuis Cek Pemahaman Interaktif</h3>
+          <p>Uji kesiapan Anda dengan pertanyaan skenario dunia kerja nyata yang dilengkapi umpan balik langsung dan penjelasan yuridis-ilmiah.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon blue">📈</div>
+          <h3>Evaluasi & Rekomendasi Remedial</h3>
+          <p>Analisis otomatis bagian mana yang belum Anda kuasai, apa yang perlu dipelajari ulang, serta rencana aksi konkrit untuk menutup kesenjangan kompetensi.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon red">🎓</div>
+          <h3>Kartu Evaluasi Kompetensi Resmi</h3>
+          <p>Dapatkan ringkasan sertifikat kompetensi I-Cheri by Lia Indah yang dapat dicetak atau disimpan sebagai portofolio kesiapan karir analis laboratorium.</p>
+        </div>
+      </div>
+
+      <!-- Learning Flow -->
+      <div class="journey-banner">
+        <div class="section-header" style="margin-bottom: 1.5rem;">
+          <span class="section-tag">Alur Pembelajaran 4 Langkah</span>
+          <h3 class="section-title" style="font-size: 1.6rem;">Bagaimana I-Cheri Membimbing Anda</h3>
+        </div>
+
+        <div class="journey-steps">
+          <div class="journey-step-item">
+            <div class="step-circle">1</div>
+            <h4>Pilih Bidang Industri</h4>
+            <p>Pilih regulasi spesifik yang ingin Anda pelajari sesuai kebutuhan industri Anda.</p>
+          </div>
+          <div class="journey-step-item">
+            <div class="step-circle">2</div>
+            <h4>Pelajari Standar Mutu</h4>
+            <p>Pahami dasar hukum, parameter pengujian, checklist GLP, dan studi kasus.</p>
+          </div>
+          <div class="journey-step-item">
+            <div class="step-circle">3</div>
+            <h4>Kerjakan Kuis Kasus</h4>
+            <p>Jawab soal skenario realistis untuk memverifikasi kedalaman pemahaman Anda.</p>
+          </div>
+          <div class="journey-step-item">
+            <div class="step-circle">4</div>
+            <h4>Evaluasi & Remedial</h4>
+            <p>Ketahui bagian yang perlu dipelajari ulang dan unduh kartu kompetensi Anda.</p>
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 2.5rem;">
+          <button class="btn btn-primary" onclick="window.ICHERI.navigateTo('sectors')">
+            Mulai Dari Langkah 1: Pilih Bidang ➔
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         PAGE 2: PILIHAN BIDANG REGULASI
+         ======================================================== -->
+    <section id="page-sectors" class="page-view">
+      <div class="section-header">
+        <span class="section-tag">Katalog Bidang Industri</span>
+        <h2 class="section-title">Pilih Bidang Regulasi yang Ingin Dipelajari</h2>
+        <p class="section-subtitle">
+          Setiap sektor industri memiliki kerangka regulasi dan standar pengujian laboratorium yang unik. Pilih bidang di bawah untuk memulai pembelajaran mendalam.
+        </p>
+      </div>
+
+      <!-- Search & Filters -->
+      <div class="search-filter-bar">
+        <div class="search-box">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--text-muted);">
+            <circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/>
+          </svg>
+          <input type="text" id="sector-search-input" placeholder="Cari sektor atau regulasi (misal: BPOM, KLHK, Tambang, B3, Mikrobiologi)...">
+        </div>
+
+        <div class="filter-tags">
+          <button class="filter-btn active" data-filter="">Semua Bidang</button>
+          <button class="filter-btn" data-filter="BPOM">Pangan & BPOM</button>
+          <button class="filter-btn" data-filter="KLHK">Lingkungan & AMDAL</button>
+          <button class="filter-btn" data-filter="Tambang">Mineral & Tambang</button>
+          <button class="filter-btn" data-filter="Mikrobiologi">Mikrobiologi</button>
+          <button class="filter-btn" data-filter="Kosmetik">Kosmetik</button>
+          <button class="filter-btn" data-filter="B3">B3 & K3</button>
+        </div>
+      </div>
+
+      <!-- Sectors Dynamic Grid Container -->
+      <div id="sectors-grid" class="sectors-grid">
+        <!-- Rendered by JavaScript -->
+      </div>
+    </section>
+
+    <!-- ========================================================
+         PAGE 3: MODUL REGULASI SPESIFIK & TERSTRUKTUR
+         ======================================================== -->
+    <section id="page-module" class="page-view">
+      <!-- Breadcrumb Nav -->
+      <div style="margin-bottom: 1.5rem;">
+        <button class="btn btn-outline btn-sm" onclick="window.ICHERI.navigateTo('sectors')">
+          ← Kembali ke Pilihan Bidang
+        </button>
+      </div>
+
+      <!-- Module Top Card -->
+      <div class="module-header-card">
+        <div class="module-title-area">
+          <span class="sector-badge badge-blue" id="module-badge-tag" style="margin-bottom: 0.75rem; display: inline-block;">BPOM & SNI</span>
+          <h2 id="module-title-text">Industri Pangan & Minuman</h2>
+          <p id="module-lead-text">
+            Regulasi keamanan pangan olahan, batas cemaran kimia & mikroba, bahan tambahan pangan (BTP), label informasi gizi, dan sistem jaminan mutu HACCP/ISO 22000.
+          </p>
+        </div>
+
+        <div class="module-quick-select">
+          <label for="module-sector-dropdown" style="font-size: 0.85rem; font-weight: 700; color: var(--text-muted);">Pindah Bidang:</label>
+          <select id="module-sector-dropdown" class="module-select-dropdown">
+            <!-- Rendered by JavaScript -->
+          </select>
+        </div>
+      </div>
+
+      <!-- Sub-tabs Navigation -->
+      <div class="module-tabs" role="tablist">
+        <button class="tab-btn active" data-tab="legal">
+          <span class="tab-btn-icon">📜</span> 1. Dasar Hukum & Regulasi
+        </button>
+        <button class="tab-btn" data-tab="params">
+          <span class="tab-btn-icon">🔬</span> 2. Parameter & Baku Mutu Lab
+        </button>
+        <button class="tab-btn" data-tab="checklist">
+          <span class="tab-btn-icon">✅</span> 3. Checklist GLP & Prosedur Lab
+        </button>
+        <button class="tab-btn" data-tab="case">
+          <span class="tab-btn-icon">📋</span> 4. Studi Kasus & Solusi (CAPA)
+        </button>
+        <button class="tab-btn" data-tab="flashcards">
+          <span class="tab-btn-icon">💡</span> 5. Flashcards Poin Kritis
+        </button>
+      </div>
+
+      <!-- TAB 1: DASAR HUKUM -->
+      <div id="tab-panel-legal" class="tab-panel active">
+        <div style="margin-bottom: 1.5rem;">
+          <h3 style="font-size: 1.3rem; font-weight: 800; color: var(--blue-900); margin-bottom: 0.35rem;">Kerangka Hukum & Payung Regulasi Resmi</h3>
+          <p style="color: var(--text-muted); font-size: 0.92rem;">Daftar undang-undang dan peraturan pemerintah yang menjadi acuan kepatuhan laboratorium di industri ini.</p>
+        </div>
+        <div id="module-legal-list" class="legal-basis-list">
+          <!-- Rendered by JS -->
+        </div>
+      </div>
+
+      <!-- TAB 2: PARAMETER & STANDAR UJI -->
+      <div id="tab-panel-params" class="tab-panel">
+        <div style="margin-bottom: 1.5rem;">
+          <h3 style="font-size: 1.3rem; font-weight: 800; color: var(--blue-900); margin-bottom: 0.35rem;">Parameter Pengujian Laboratorium & Batas Baku Mutu</h3>
+          <p style="color: var(--text-muted); font-size: 0.92rem;">Spesifikasi instrumen pengujian, batas konsentrasi regulasi, dan metode standar acuan resmi.</p>
+        </div>
+        <div class="parameters-table-wrap">
+          <table class="parameters-table">
+            <thead>
+              <tr>
+                <th style="width: 25%;">Parameter & Instrumen</th>
+                <th style="width: 20%;">Standar Acuan (SNI/AOAC)</th>
+                <th style="width: 25%;">Batas Baku Mutu Regulasi</th>
+                <th style="width: 30%;">Arti Penting & Catatan Analitik</th>
+              </tr>
+            </thead>
+            <tbody id="module-params-tbody">
+              <!-- Rendered by JS -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- TAB 3: CHECKLIST GLP -->
+      <div id="tab-panel-checklist" class="tab-panel">
+        <div style="margin-bottom: 1.5rem;">
+          <h3 style="font-size: 1.3rem; font-weight: 800; color: var(--blue-900); margin-bottom: 0.35rem;">Checklist Prosedur & Good Laboratory Practice (GLP)</h3>
+          <p style="color: var(--text-muted); font-size: 0.92rem;">Langkah wajib penjaminan mutu analitik (Quality Assurance & Quality Control) sebelum merilis hasil uji.</p>
+        </div>
+        <div id="module-checklist-wrap" class="checklist-container">
+          <!-- Rendered by JS -->
+        </div>
+      </div>
+
+      <!-- TAB 4: STUDI KASUS -->
+      <div id="tab-panel-case" class="tab-panel">
+        <div style="margin-bottom: 1.5rem;">
+          <h3 style="font-size: 1.3rem; font-weight: 800; color: var(--blue-900); margin-bottom: 0.35rem;">Studi Kasus Deviasi di Industri & Investigasi CAPA</h3>
+          <p style="color: var(--text-muted); font-size: 0.92rem;">Simulasi permasalahan nyata di lantai produksi dan laboratorium serta analisis akar penyebabnya.</p>
+        </div>
+        <div id="module-case-wrap">
+          <!-- Rendered by JS -->
+        </div>
+      </div>
+
+      <!-- TAB 5: FLASHCARDS -->
+      <div id="tab-panel-flashcards" class="tab-panel">
+        <div style="margin-bottom: 1.5rem;">
+          <h3 style="font-size: 1.3rem; font-weight: 800; color: var(--blue-900); margin-bottom: 0.35rem;">Kartu Hafalan Cepat (Interactive Flashcards)</h3>
+          <p style="color: var(--text-muted); font-size: 0.92rem;">Klik kartu di bawah untuk membalik dan melihat intisari jawaban poin kritis regulasi.</p>
+        </div>
+        <div id="module-flashcards-wrap" class="flashcards-grid">
+          <!-- Rendered by JS -->
+        </div>
+      </div>
+
+      <!-- Module Bottom Action Bar -->
+      <div class="module-bottom-bar">
+        <div>
+          <h4 style="font-size: 1.1rem; font-weight: 800; color: var(--blue-900);">Siap Menguji Pemahaman Anda?</h4>
+          <p style="font-size: 0.88rem; color: var(--text-muted);">Uji penguasaan standar regulasi bidang ini melalui 5 studi kasus analitis.</p>
+        </div>
+        <div style="display: flex; gap: 0.75rem;">
+          <button class="btn btn-outline" onclick="window.ICHERI.navigateTo('sectors')">
+            Pilih Bidang Lain
+          </button>
+          <button class="btn btn-accent" onclick="window.ICHERI.startQuizForSector()">
+            Lanjut ke Kuis Pemahaman ➔
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         PAGE 4: KUIS PEMAHAMAN REGULASI
+         ======================================================== -->
+    <section id="page-quiz" class="page-view">
+      <div class="quiz-container">
+        <!-- Quiz Header Info -->
+        <div class="quiz-header-card">
+          <div class="quiz-meta-row">
+            <div class="quiz-sector-badge">
+              <span>🎯 Bidang:</span>
+              <strong id="quiz-sector-name">Industri Pangan & Minuman</strong>
+            </div>
+            <div class="quiz-progress-text" id="quiz-progress-text">
+              Pertanyaan 1 dari 5
+            </div>
+          </div>
+          <div class="progress-bar-track">
+            <div class="progress-bar-fill" id="quiz-progress-fill" style="width: 20%;"></div>
+          </div>
+        </div>
+
+        <!-- Question Card -->
+        <div class="question-card">
+          <div class="question-number-pill" id="quiz-q-number">Soal Kasus #1</div>
+          <h3 class="question-text" id="quiz-q-text">
+            Memuat pertanyaan kuis...
+          </h3>
+
+          <!-- Options Container -->
+          <div class="options-list" id="quiz-options-list">
+            <!-- Rendered by JS -->
+          </div>
+
+          <!-- Immediate Feedback Box -->
+          <div class="quiz-feedback-box" id="quiz-feedback-box">
+            <!-- Rendered by JS on click -->
+          </div>
+        </div>
+
+        <!-- Quiz Navigation Controls -->
+        <div class="quiz-nav-row">
+          <button class="btn btn-outline" onclick="window.ICHERI.navigateTo('module')">
+            ← Kembali Baca Modul
+          </button>
+          <button class="btn btn-primary" id="quiz-next-btn">
+            Pertanyaan Selanjutnya ➔
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         PAGE 5: EVALUASI KUIS & ACTION PLAN
+         ======================================================== -->
+    <section id="page-evaluation" class="page-view">
+      <div class="eval-container">
+        <!-- Summary Score Card -->
+        <div class="eval-summary-card">
+          <div class="score-circle-wrapper">
+            <div class="score-num" id="eval-score-num">80%</div>
+            <div class="score-max">Skor Akhir</div>
+          </div>
+
+          <div class="competence-badge badge-proficient" id="eval-competence-badge">
+            Kompeten - Standar Regulasi Dikuasai
+          </div>
+
+          <h2 class="eval-headline" id="eval-headline">
+            Evaluasi Hasil Pembelajaran Regulasi
+          </h2>
+          <p class="eval-subheadline" id="eval-subheadline">
+            Berikut adalah rekapitulasi capaian kompetensi Anda pada bidang <strong id="eval-sector-title">Industri Pangan & Minuman</strong>.
+          </p>
+
+          <div class="eval-stats-grid">
+            <div class="eval-stat-box">
+              <h5>Total Soal Diuji</h5>
+              <p id="eval-stat-total">5</p>
+            </div>
+            <div class="eval-stat-box">
+              <h5 style="color: #059669;">Jawaban Tepat</h5>
+              <p id="eval-stat-correct" style="color: #059669;">4</p>
+            </div>
+            <div class="eval-stat-box">
+              <h5 style="color: var(--red-600);">Perlu Penguatan</h5>
+              <p id="eval-stat-wrong" style="color: var(--red-600);">1</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- "Apa yang Perlu Dipelajari Ulang" (Remedial Gap Analysis) -->
+        <div class="remedial-section" id="eval-remedial-section">
+          <div class="remedial-header">
+            <div class="remedial-icon">⚠️</div>
+            <div>
+              <h3>Apa yang Perlu Dipelajari Ulang? (Analisis Celah Kompetensi)</h3>
+              <p>Berdasarkan jawaban kuis Anda, berikut adalah topik dan regulasi spesifik yang belum dikuasai secara optimal:</p>
+            </div>
+          </div>
+
+          <div class="remedial-list" id="eval-remedial-list">
+            <!-- Rendered by JS -->
+          </div>
+        </div>
+
+        <!-- Question Review Accordion / List -->
+        <div class="breakdown-section">
+          <h3>Rincian Jawaban & Pembahasan Regulasi Lengkap</h3>
+          <div id="eval-breakdown-list">
+            <!-- Rendered by JS -->
+          </div>
+        </div>
+
+        <!-- 3-Step Action Plan -->
+        <div class="action-plan-box">
+          <h4>Rencana Aksi Membangun Kompetensi Laboratorium</h4>
+          <p class="plan-sub">Langkah praktis yang direkomendasikan Lia Indah untuk memperkuat keandalan teknis analis:</p>
+
+          <div class="plan-steps-list">
+            <div class="plan-step-card">
+              <div class="plan-step-num">Langkah 1</div>
+              <h6>Review Dokumen Resmi</h6>
+              <p>Unduh lembar dokumen asli (Peraturan BPOM/Permen LHK/SNI) dan baca pasal terkait baku mutu serta toleransi uji.</p>
+            </div>
+            <div class="plan-step-card">
+              <div class="plan-step-num">Langkah 2</div>
+              <h6>Praktikkan Kontrol Mutu QC</h6>
+              <p>Lakukan verifikasi limit deteksi (LOD/LOQ) dan uji spike matrix recovery pada instrumen analisis Anda.</p>
+            </div>
+            <div class="plan-step-card">
+              <div class="plan-step-num">Langkah 3</div>
+              <h6>Ikuti Uji Banding Antar-Lab</h6>
+              <p>Latih kehandalan prosedur analisis melalui program uji profisiensi eksternal (PTP) terakreditasi KAN.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="eval-actions-bar">
+          <button class="btn btn-primary" onclick="window.ICHERI.openCertificateModal()">
+            Cetak / Simpan Kartu Hasil Belajar 🎓
+          </button>
+          <button class="btn btn-soft-red" onclick="window.ICHERI.startQuizForSector()">
+            Ulangi Kuis Bidang Ini 🔄
+          </button>
+          <button class="btn btn-outline" onclick="window.ICHERI.navigateTo('sectors')">
+            Pelajari Bidang Industri Lainnya ➔
+          </button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Modal: Certificate / Kartu Evaluasi Kompetensi -->
+  <div class="modal-overlay" id="certificate-modal">
+    <div class="certificate-card">
+      <button class="cert-close-btn" onclick="window.ICHERI.closeCertificateModal()">✕</button>
+      
+      <div class="cert-header">
+        <h2>KARTU EVALUASI KOMPETENSI I-CHERI</h2>
+        <p>Industrial Chemistry Regulation Learning Hub &bull; Verifikasi Mandiri</p>
+      </div>
+
+      <div class="cert-body">
+        <p class="cert-intro">Diberikan kepada:</p>
+        <div class="cert-name" id="cert-user-name">Peserta Pelatihan I-Cheri</div>
+        <p class="cert-desc">
+          Telah berhasil menyelesaikan modul pembelajaran dan evaluasi standar regulasi industri pada bidang <strong id="cert-sector-name">Industri Pangan & Minuman</strong> dengan hasil memuaskan.
+        </p>
+
+        <div style="background: var(--blue-50); padding: 0.75rem 1.25rem; border-radius: var(--radius-md); display: inline-block; margin-bottom: 1.5rem; border: 1px solid var(--border-blue);">
+          <strong id="cert-score-text" style="color: var(--blue-800); font-size: 1rem;">Skor Evaluasi Kompetensi: 100%</strong>
+        </div>
+      </div>
+
+      <div class="cert-footer">
+        <div>
+          <div class="sign-title">Tanggal Penerbitan</div>
+          <div id="cert-date-text" style="font-weight: 700; color: var(--blue-900); margin-top: 0.5rem;">6 November 2026</div>
+          <div style="font-size: 0.75rem; color: var(--text-light); margin-top: 0.25rem;">I-Cheri Verification ID: #ICH-2026-REG</div>
+        </div>
+
+        <div class="cert-sign">
+          <div class="sign-title">Pembuat Kurikulum I-Cheri</div>
+          <div class="sign-name">Lia Indah</div>
+          <div style="font-size: 0.75rem; color: var(--text-muted); font-style: italic;">"Understand the standards, Build Laboratory Competence"</div>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 2rem;">
+        <button class="btn btn-primary" onclick="window.ICHERI.printCertificate()">
+          🖨️ Cetak / Simpan sebagai PDF
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <h4>I-Cheri <span>Hub</span></h4>
+          <p>Industrial Chemistry Regulation Learning Hub</p>
+        </div>
+        <div class="footer-jargon">
+          "Understand the standards, Build Laboratory Competence"
+        </div>
+        <div>
+          <button class="btn btn-soft-blue btn-sm" onclick="window.ICHERI.navigateTo('home')">
+            Kembali ke Atas ↑
+          </button>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2026 <strong>I-Cheri</strong> by <strong>Lia Indah</strong>. Platform Edukasi Regulasi & Standar Kimia Industri Indonesia.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
