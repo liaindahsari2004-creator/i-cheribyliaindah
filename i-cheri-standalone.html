@@ -1,0 +1,4278 @@
+﻿<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>I-Cheri - Industrial Chemistry Regulation Learning Hub by Lia Indah</title>
+  <meta name="description" content="I-Cheri: Industrial Chemistry Regulation Learning Hub by Lia Indah. Understand the standards, Build Laboratory Competence. Belajar regulasi industri makanan (BPOM), lingkungan, mineral, mikrobiologi, kosmetik, dan B3.">
+  
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,600;1,700&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheets -->
+  <style>
+/* ========================================================
+   I-Cheri (Industrial Chemistry Regulation Learning Hub)
+   by Lia Indah
+   "Understand the standards, Build Laboratory Competence"
+   Color Palette: Soft Blue & Soft Red Harmonized Theme
+   ======================================================== */
+
+:root {
+  /* Soft Blue Palette */
+  --blue-50: #f1f6fa;
+  --blue-100: #e2edf5;
+  --blue-200: #c7ddec;
+  --blue-300: #9fc3dd;
+  --blue-400: #6ca0c7;
+  --blue-500: #4680ae;
+  --blue-600: #35678f;
+  --blue-700: #2c5374;
+  --blue-800: #25445e;
+  --blue-900: #1b3042;
+
+  /* Soft Red / Dusty Coral Palette */
+  --red-50: #fdf5f5;
+  --red-100: #fce8e8;
+  --red-200: #fad3d3;
+  --red-300: #f5b0b1;
+  --red-400: #eb8082;
+  --red-500: #db5c5e;
+  --red-600: #c24346;
+  --red-700: #a13437;
+  --red-800: #852d2f;
+  --red-900: #5c1e20;
+
+  /* Neutrals & Surfaces */
+  --bg-main: #f8fafc;
+  --surface: #ffffff;
+  --surface-alt: #f1f5f9;
+  --text-main: #1e293b;
+  --text-muted: #64748b;
+  --text-light: #94a3b8;
+  --border-light: #e2e8f0;
+  --border-blue: #cbdfe9;
+  --border-red: #f3d4d4;
+
+  /* Semantic */
+  --success: #10b981;
+  --success-bg: #ecfdf5;
+  --warning: #f59e0b;
+  --warning-bg: #fffbeb;
+  --danger: #ef4444;
+  --danger-bg: #fef2f2;
+  --info: #0ea5e9;
+
+  /* Gradients */
+  --grad-hero: linear-gradient(135deg, #f1f6fa 0%, #fdf5f5 100%);
+  --grad-primary: linear-gradient(135deg, #35678f 0%, #c24346 100%);
+  --grad-blue: linear-gradient(135deg, #4680ae 0%, #2c5374 100%);
+  --grad-red: linear-gradient(135deg, #eb8082 0%, #c24346 100%);
+  --grad-card: linear-gradient(180deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 250, 252, 0.95) 100%);
+
+  /* Shadows & Radius */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.03);
+  --shadow-md: 0 4px 6px -1px rgba(44, 83, 116, 0.08), 0 2px 4px -1px rgba(194, 67, 70, 0.05);
+  --shadow-lg: 0 10px 15px -3px rgba(44, 83, 116, 0.1), 0 4px 6px -2px rgba(194, 67, 70, 0.06);
+  --shadow-xl: 0 20px 25px -5px rgba(44, 83, 116, 0.12), 0 10px 10px -5px rgba(194, 67, 70, 0.04);
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Reset & Base Setup */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Navigation Header */
+.navbar {
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-light);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 10px rgba(44, 83, 116, 0.04);
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+}
+
+.brand-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.brand-logo-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  background: var(--grad-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  box-shadow: var(--shadow-md);
+  flex-shrink: 0;
+}
+
+.brand-text h1 {
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--blue-800);
+  line-height: 1.2;
+}
+
+.brand-text h1 span {
+  color: var(--red-600);
+}
+
+.brand-text .author-badge {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.author-badge strong {
+  color: var(--red-700);
+}
+
+/* Stepper / Breadcrumbs Bar */
+.stepper-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--blue-50);
+  border: 1px solid var(--border-blue);
+  padding: 0.35rem 0.6rem;
+  border-radius: 999px;
+}
+
+.step-item {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.step-item.active {
+  background: var(--surface);
+  color: var(--blue-700);
+  box-shadow: 0 1px 4px rgba(44, 83, 116, 0.12);
+}
+
+.step-item.completed {
+  color: var(--red-600);
+}
+
+.step-num {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--blue-200);
+  color: var(--blue-800);
+  font-size: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+.step-item.active .step-num {
+  background: var(--blue-600);
+  color: #fff;
+}
+
+.step-item.completed .step-num {
+  background: var(--red-500);
+  color: #fff;
+}
+
+/* Header Action Buttons */
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.35rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: var(--radius-md);
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+  text-decoration: none;
+  line-height: 1.4;
+}
+
+.btn-soft-blue {
+  background-color: var(--blue-100);
+  color: var(--blue-700);
+  border: 1px solid var(--blue-200);
+}
+
+.btn-soft-blue:hover {
+  background-color: var(--blue-200);
+  color: var(--blue-900);
+  transform: translateY(-1px);
+}
+
+.btn-soft-red {
+  background-color: var(--red-100);
+  color: var(--red-700);
+  border: 1px solid var(--red-200);
+}
+
+.btn-soft-red:hover {
+  background-color: var(--red-200);
+  color: var(--red-900);
+  transform: translateY(-1px);
+}
+
+.btn-primary {
+  background: var(--grad-blue);
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(44, 83, 116, 0.25);
+}
+
+.btn-primary:hover {
+  background: var(--blue-700);
+  box-shadow: 0 6px 16px rgba(44, 83, 116, 0.35);
+  transform: translateY(-2px);
+}
+
+.btn-accent {
+  background: var(--grad-red);
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(194, 67, 70, 0.25);
+}
+
+.btn-accent:hover {
+  background: var(--red-600);
+  box-shadow: 0 6px 16px rgba(194, 67, 70, 0.35);
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--text-main);
+  border: 1.5px solid var(--border-light);
+}
+
+.btn-outline:hover {
+  background: var(--surface-alt);
+  border-color: var(--blue-300);
+}
+
+/* Page Views System */
+.page-view {
+  display: none;
+  padding: 2.5rem 0 4rem;
+  animation: fadeIn 0.35s ease-out forwards;
+}
+
+.page-view.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ========================================================
+   PAGE 1: LANDING / BERANDA
+   ======================================================== */
+.hero-section {
+  position: relative;
+  background: var(--grad-hero);
+  border-radius: var(--radius-xl);
+  padding: 4rem 3rem;
+  border: 1px solid var(--border-blue);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 3.5rem;
+  overflow: hidden;
+}
+
+.hero-glow-1 {
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  width: 320px;
+  height: 320px;
+  background: radial-gradient(circle, rgba(194, 67, 70, 0.15) 0%, rgba(255, 255, 255, 0) 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.hero-glow-2 {
+  position: absolute;
+  bottom: -80px;
+  left: 20%;
+  width: 360px;
+  height: 360px;
+  background: radial-gradient(circle, rgba(53, 103, 143, 0.15) 0%, rgba(255, 255, 255, 0) 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  max-width: 780px;
+  z-index: 2;
+}
+
+.hero-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid var(--border-red);
+  padding: 0.35rem 0.9rem;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--red-700);
+  margin-bottom: 1.25rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.hero-pill .dot {
+  width: 8px;
+  height: 8px;
+  background: var(--red-500);
+  border-radius: 50%;
+  display: inline-block;
+  box-shadow: 0 0 0 3px rgba(219, 92, 94, 0.25);
+}
+
+.hero-title {
+  font-size: 2.85rem;
+  font-weight: 800;
+  line-height: 1.15;
+  color: var(--blue-900);
+  margin-bottom: 1.2rem;
+  letter-spacing: -0.03em;
+}
+
+.hero-title span.accent-red {
+  color: var(--red-600);
+}
+
+.hero-jargon {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--blue-700);
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-style: italic;
+}
+
+.hero-jargon::before {
+  content: "“";
+  font-size: 2rem;
+  color: var(--red-400);
+  line-height: 0;
+}
+
+.hero-jargon::after {
+  content: "”";
+  font-size: 2rem;
+  color: var(--red-400);
+  line-height: 0;
+}
+
+.hero-desc {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 2.25rem;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.hero-meta-strip {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(44, 83, 116, 0.12);
+}
+
+.meta-item {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.meta-icon-box {
+  width: 34px;
+  height: 34px;
+  border-radius: var(--radius-sm);
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--blue-600);
+  border: 1px solid var(--border-light);
+}
+
+/* Feature Grid on Landing */
+.section-header {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 3rem;
+}
+
+.section-tag {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--red-600);
+  background: var(--red-50);
+  border: 1px solid var(--border-red);
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  margin-bottom: 0.75rem;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--blue-900);
+  letter-spacing: -0.02em;
+  margin-bottom: 0.75rem;
+}
+
+.section-subtitle {
+  font-size: 1rem;
+  color: var(--text-muted);
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.75rem;
+  margin-bottom: 4rem;
+}
+
+.feature-card {
+  background: var(--surface);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--blue-200);
+}
+
+.feature-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--grad-primary);
+  opacity: 0;
+  transition: var(--transition);
+}
+
+.feature-card:hover::before {
+  opacity: 1;
+}
+
+.feature-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+  font-size: 1.35rem;
+}
+
+.feature-icon.blue {
+  background: var(--blue-100);
+  color: var(--blue-700);
+}
+
+.feature-icon.red {
+  background: var(--red-100);
+  color: var(--red-600);
+}
+
+.feature-card h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--blue-900);
+  margin-bottom: 0.65rem;
+}
+
+.feature-card p {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* Learning Journey Flow */
+.journey-banner {
+  background: #ffffff;
+  border: 1px solid var(--border-blue);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.journey-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  position: relative;
+  margin-top: 2rem;
+}
+
+.journey-step-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.step-circle {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--blue-50);
+  border: 2px solid var(--blue-200);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--blue-700);
+  font-weight: 800;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  transition: var(--transition);
+}
+
+.journey-step-item:hover .step-circle {
+  background: var(--red-500);
+  border-color: var(--red-300);
+  color: #fff;
+  transform: scale(1.08);
+}
+
+.journey-step-item h4 {
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: var(--blue-900);
+  margin-bottom: 0.35rem;
+}
+
+.journey-step-item p {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+/* ========================================================
+   PAGE 2: PILIHAN BIDANG REGULASI
+   ======================================================== */
+.search-filter-bar {
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem 1.75rem;
+  margin-bottom: 2.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: var(--surface-alt);
+  border: 1px solid var(--border-light);
+  padding: 0.6rem 1rem;
+  border-radius: var(--radius-md);
+  flex: 1;
+  min-width: 260px;
+}
+
+.search-box input {
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 0.92rem;
+  color: var(--text-main);
+  width: 100%;
+}
+
+.filter-tags {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  background: transparent;
+  border: 1px solid var(--border-light);
+  padding: 0.45rem 0.9rem;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.filter-btn:hover, .filter-btn.active {
+  background: var(--blue-100);
+  border-color: var(--blue-300);
+  color: var(--blue-800);
+}
+
+/* Sectors Grid */
+.sectors-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.sector-card {
+  background: var(--surface);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition);
+  position: relative;
+}
+
+.sector-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-xl);
+  border-color: var(--blue-300);
+}
+
+.sector-card-header {
+  padding: 1.75rem 1.75rem 1.25rem;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.sector-card-header.soft-blue-theme {
+  background: linear-gradient(180deg, var(--blue-50) 0%, #ffffff 100%);
+}
+
+.sector-card-header.soft-red-theme {
+  background: linear-gradient(180deg, var(--red-50) 0%, #ffffff 100%);
+}
+
+.sector-badge-strip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.sector-badge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.badge-blue {
+  background: var(--blue-100);
+  color: var(--blue-700);
+  border: 1px solid var(--blue-200);
+}
+
+.badge-red {
+  background: var(--red-100);
+  color: var(--red-700);
+  border: 1px solid var(--red-200);
+}
+
+.sector-icon-wrap {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.35rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.icon-blue {
+  background: var(--blue-600);
+  color: #ffffff;
+}
+
+.icon-red {
+  background: var(--red-500);
+  color: #ffffff;
+}
+
+.sector-card-title {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--blue-900);
+  margin-bottom: 0.4rem;
+  line-height: 1.3;
+}
+
+.sector-regulators {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-top: 0.65rem;
+}
+
+.regulator-pill {
+  font-size: 0.72rem;
+  font-weight: 600;
+  background: var(--surface-alt);
+  color: var(--text-muted);
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+}
+
+.sector-card-body {
+  padding: 1.5rem 1.75rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.sector-desc {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+  flex: 1;
+}
+
+.sector-highlights {
+  list-style: none;
+  border-top: 1px dashed var(--border-light);
+  padding-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.sector-highlights li {
+  font-size: 0.84rem;
+  color: var(--text-main);
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.sector-highlights li svg {
+  color: var(--blue-600);
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.sector-card-footer {
+  padding: 1.25rem 1.75rem;
+  background: var(--surface-alt);
+  border-top: 1px solid var(--border-light);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ========================================================
+   PAGE 3: MODUL REGULASI SPESIFIK & TERSTRUKTUR
+   ======================================================== */
+.module-header-card {
+  background: var(--surface);
+  border: 1px solid var(--border-blue);
+  border-radius: var(--radius-xl);
+  padding: 2.5rem;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.module-header-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 100%;
+  background: var(--grad-primary);
+}
+
+.module-title-area {
+  max-width: 750px;
+}
+
+.module-title-area h2 {
+  font-size: 2.1rem;
+  font-weight: 800;
+  color: var(--blue-900);
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.02em;
+}
+
+.module-title-area p {
+  font-size: 1rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.module-quick-select {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.module-select-dropdown {
+  padding: 0.65rem 1rem;
+  border-radius: var(--radius-md);
+  border: 1.5px solid var(--border-blue);
+  background: var(--blue-50);
+  color: var(--blue-800);
+  font-weight: 700;
+  font-size: 0.88rem;
+  cursor: pointer;
+  outline: none;
+}
+
+/* Sub-tabs inside Module */
+.module-tabs {
+  display: flex;
+  gap: 0.5rem;
+  border-bottom: 2px solid var(--border-light);
+  margin-bottom: 2rem;
+  overflow-x: auto;
+  padding-bottom: 2px;
+}
+
+.tab-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.4rem;
+  background: transparent;
+  border: none;
+  border-bottom: 3px solid transparent;
+  color: var(--text-muted);
+  font-weight: 600;
+  font-size: 0.92rem;
+  cursor: pointer;
+  transition: var(--transition);
+  white-space: nowrap;
+}
+
+.tab-btn:hover {
+  color: var(--blue-600);
+}
+
+.tab-btn.active {
+  color: var(--blue-700);
+  border-bottom-color: var(--red-500);
+  font-weight: 700;
+}
+
+.tab-btn-icon {
+  font-size: 1.1rem;
+}
+
+/* Tab Panels */
+.tab-panel {
+  display: none;
+  animation: fadeIn 0.3s ease;
+}
+
+.tab-panel.active {
+  display: block;
+}
+
+/* Legal Basis Cards */
+.legal-basis-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 1.5rem;
+}
+
+.legal-card {
+  background: var(--surface);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  position: relative;
+}
+
+.legal-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--blue-300);
+}
+
+.legal-code-badge {
+  display: inline-block;
+  background: var(--blue-100);
+  color: var(--blue-800);
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-sm);
+  margin-bottom: 0.75rem;
+  border: 1px solid var(--blue-200);
+}
+
+.legal-card h4 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--blue-900);
+  margin-bottom: 0.65rem;
+}
+
+.legal-card p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* Core Parameters Table & Cards */
+.parameters-table-wrap {
+  background: var(--surface);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  overflow-x: auto;
+  box-shadow: var(--shadow-sm);
+}
+
+.parameters-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.parameters-table th {
+  background: var(--blue-50);
+  color: var(--blue-800);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid var(--border-blue);
+}
+
+.parameters-table td {
+  padding: 1.15rem 1.25rem;
+  border-bottom: 1px solid var(--border-light);
+  font-size: 0.9rem;
+  vertical-align: top;
+}
+
+.parameters-table tr:hover {
+  background: #fafcff;
+}
+
+.param-name {
+  font-weight: 700;
+  color: var(--blue-900);
+}
+
+.param-instrument {
+  display: inline-block;
+  background: var(--surface-alt);
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  color: var(--text-main);
+  font-weight: 600;
+  margin-top: 0.35rem;
+}
+
+.limit-badge {
+  background: var(--red-50);
+  border: 1px solid var(--border-red);
+  color: var(--red-700);
+  padding: 0.4rem 0.75rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+/* Lab Checklist */
+.checklist-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+
+.checklist-card {
+  background: var(--surface);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.check-icon-circle {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--blue-100);
+  color: var(--blue-700);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.checklist-card p {
+  font-size: 0.92rem;
+  color: var(--text-main);
+  line-height: 1.55;
+}
+
+/* Case Study Panel */
+.case-study-card {
+  background: var(--surface);
+  border: 1px solid var(--border-blue);
+  border-radius: var(--radius-xl);
+  padding: 2.25rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.case-study-title {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--blue-900);
+  margin-bottom: 1.5rem;
+}
+
+.case-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.case-box {
+  padding: 1.5rem;
+  border-radius: var(--radius-md);
+  border: 1px solid transparent;
+}
+
+.case-box.problem {
+  background: var(--red-50);
+  border-color: var(--border-red);
+}
+
+.case-box.root-cause {
+  background: var(--warning-bg);
+  border-color: #fde68a;
+}
+
+.case-box.solution {
+  background: var(--blue-50);
+  border-color: var(--border-blue);
+}
+
+.case-box-header {
+  font-size: 0.85rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.case-box.problem .case-box-header { color: var(--red-700); }
+.case-box.root-cause .case-box-header { color: #b45309; }
+.case-box.solution .case-box-header { color: var(--blue-800); }
+
+.case-box p {
+  font-size: 0.92rem;
+  color: var(--text-main);
+  line-height: 1.6;
+}
+
+/* Flashcards Grid */
+.flashcards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.75rem;
+}
+
+.flashcard {
+  perspective: 1000px;
+  min-height: 200px;
+  cursor: pointer;
+}
+
+.flashcard-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-style: preserve-3d;
+  border-radius: var(--radius-lg);
+}
+
+.flashcard.flipped .flashcard-inner {
+  transform: rotateY(180deg);
+}
+
+.flashcard-front, .flashcard-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-light);
+}
+
+.flashcard-front {
+  background: var(--surface);
+  color: var(--blue-900);
+}
+
+.flashcard-front .tag {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--red-600);
+  background: var(--red-50);
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  margin-bottom: 0.75rem;
+}
+
+.flashcard-front h4 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.flashcard-front .click-hint {
+  font-size: 0.75rem;
+  color: var(--text-light);
+  margin-top: 1rem;
+}
+
+.flashcard-back {
+  background: var(--blue-600);
+  color: #ffffff;
+  transform: rotateY(180deg);
+  border-color: var(--blue-700);
+}
+
+.flashcard-back p {
+  font-size: 0.95rem;
+  font-weight: 500;
+  line-height: 1.55;
+}
+
+/* Module Bottom Action Bar */
+.module-bottom-bar {
+  margin-top: 3rem;
+  padding: 1.75rem;
+  background: var(--surface);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-xl);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  box-shadow: var(--shadow-sm);
+}
+
+/* ========================================================
+   PAGE 4: KUIS PEMAHAMAN REGULASI
+   ======================================================== */
+.quiz-container {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.quiz-header-card {
+  background: var(--surface);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-xl);
+  padding: 2rem;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 2rem;
+}
+
+.quiz-meta-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.quiz-sector-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--blue-800);
+  background: var(--blue-100);
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+}
+
+.quiz-progress-text {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--red-700);
+}
+
+.progress-bar-track {
+  width: 100%;
+  height: 8px;
+  background: var(--surface-alt);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: var(--grad-primary);
+  width: 20%;
+  transition: width 0.4s ease;
+  border-radius: 999px;
+}
+
+/* Question Card */
+.question-card {
+  background: var(--surface);
+  border: 1px solid var(--border-blue);
+  border-radius: var(--radius-xl);
+  padding: 2.5rem;
+  box-shadow: var(--shadow-md);
+  margin-bottom: 2rem;
+}
+
+.question-number-pill {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.75rem;
+}
+
+.question-text {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--blue-950);
+  line-height: 1.5;
+  margin-bottom: 1.75rem;
+}
+
+.options-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  margin-bottom: 1.75rem;
+}
+
+.option-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.15rem 1.4rem;
+  border: 1.5px solid var(--border-light);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  cursor: pointer;
+  transition: var(--transition);
+  user-select: none;
+}
+
+.option-item:hover:not(.disabled) {
+  border-color: var(--blue-400);
+  background: var(--blue-50);
+  transform: translateX(4px);
+}
+
+.option-marker {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 2px solid var(--border-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  flex-shrink: 0;
+  transition: var(--transition);
+}
+
+.option-item:hover:not(.disabled) .option-marker {
+  border-color: var(--blue-600);
+  color: var(--blue-600);
+}
+
+.option-item.selected {
+  border-color: var(--blue-600);
+  background: var(--blue-50);
+}
+
+.option-item.selected .option-marker {
+  background: var(--blue-600);
+  border-color: var(--blue-600);
+  color: #fff;
+}
+
+.option-item.correct {
+  border-color: var(--success);
+  background: var(--success-bg);
+}
+
+.option-item.correct .option-marker {
+  background: var(--success);
+  border-color: var(--success);
+  color: #fff;
+}
+
+.option-item.wrong {
+  border-color: var(--danger);
+  background: var(--danger-bg);
+}
+
+.option-item.wrong .option-marker {
+  background: var(--danger);
+  border-color: var(--danger);
+  color: #fff;
+}
+
+.option-label {
+  font-size: 0.96rem;
+  color: var(--text-main);
+  line-height: 1.5;
+  flex: 1;
+}
+
+/* Quiz Feedback Box */
+.quiz-feedback-box {
+  display: none;
+  border-radius: var(--radius-md);
+  padding: 1.35rem 1.6rem;
+  margin-top: 1.5rem;
+  animation: fadeIn 0.3s ease;
+}
+
+.quiz-feedback-box.show {
+  display: block;
+}
+
+.quiz-feedback-box.correct {
+  background: var(--success-bg);
+  border: 1px solid #a7f3d0;
+}
+
+.quiz-feedback-box.wrong {
+  background: var(--danger-bg);
+  border: 1px solid #fecaca;
+}
+
+.feedback-status {
+  font-size: 1rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.quiz-feedback-box.correct .feedback-status { color: #065f46; }
+.quiz-feedback-box.wrong .feedback-status { color: #991b1b; }
+
+.feedback-explanation {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--text-main);
+}
+
+.quiz-nav-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+/* ========================================================
+   PAGE 5: EVALUASI KUIS & ACTION PLAN
+   ======================================================== */
+.eval-container {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.eval-summary-card {
+  background: var(--surface);
+  border: 1px solid var(--border-blue);
+  border-radius: var(--radius-xl);
+  padding: 3rem 2.5rem;
+  box-shadow: var(--shadow-lg);
+  margin-bottom: 2.5rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.eval-summary-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: var(--grad-primary);
+}
+
+.score-circle-wrapper {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  margin: 0 auto 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: var(--grad-hero);
+  border: 6px solid var(--blue-200);
+  box-shadow: var(--shadow-md);
+}
+
+.score-num {
+  font-size: 2.75rem;
+  font-weight: 800;
+  color: var(--blue-900);
+  line-height: 1;
+}
+
+.score-max {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.competence-badge {
+  display: inline-block;
+  font-size: 0.92rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.4rem 1.25rem;
+  border-radius: 999px;
+  margin-bottom: 1rem;
+}
+
+.badge-proficient {
+  background: var(--success-bg);
+  color: #065f46;
+  border: 1px solid #a7f3d0;
+}
+
+.badge-need-improvement {
+  background: var(--red-100);
+  color: var(--red-700);
+  border: 1px solid var(--red-200);
+}
+
+.eval-headline {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--blue-950);
+  margin-bottom: 0.5rem;
+}
+
+.eval-subheadline {
+  font-size: 1rem;
+  color: var(--text-muted);
+  max-width: 650px;
+  margin: 0 auto 2rem;
+}
+
+.eval-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  max-width: 600px;
+  margin: 0 auto;
+  border-top: 1px solid var(--border-light);
+  padding-top: 1.75rem;
+}
+
+.eval-stat-box h5 {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.eval-stat-box p {
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: var(--blue-900);
+}
+
+/* Remedial / "Apa yang Perlu Dipelajari Ulang" Section */
+.remedial-section {
+  background: var(--surface);
+  border: 1.5px solid var(--border-red);
+  border-radius: var(--radius-xl);
+  padding: 2.5rem;
+  margin-bottom: 2.5rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.remedial-header {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin-bottom: 1.25rem;
+}
+
+.remedial-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  background: var(--red-100);
+  color: var(--red-600);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.remedial-header h3 {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--red-800);
+}
+
+.remedial-header p {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+}
+
+.remedial-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.remedial-card {
+  background: var(--red-50);
+  border: 1px solid var(--border-red);
+  border-radius: var(--radius-md);
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.remedial-card-content h5 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--red-900);
+  margin-bottom: 0.35rem;
+}
+
+.remedial-card-content p {
+  font-size: 0.88rem;
+  color: var(--text-main);
+  line-height: 1.55;
+}
+
+/* Comprehensive Breakdown Accordion */
+.breakdown-section {
+  background: var(--surface);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-xl);
+  padding: 2.5rem;
+  margin-bottom: 2.5rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.breakdown-section h3 {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--blue-900);
+  margin-bottom: 1.5rem;
+}
+
+.qa-review-item {
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1rem;
+  background: var(--surface);
+}
+
+.qa-review-item.is-correct {
+  border-left: 5px solid var(--success);
+}
+
+.qa-review-item.is-wrong {
+  border-left: 5px solid var(--danger);
+}
+
+.qa-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.qa-status-tag {
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  text-transform: uppercase;
+}
+
+.qa-status-tag.correct {
+  background: var(--success-bg);
+  color: #065f46;
+}
+
+.qa-status-tag.wrong {
+  background: var(--danger-bg);
+  color: #991b1b;
+}
+
+.qa-q-text {
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: var(--blue-900);
+  margin-bottom: 0.65rem;
+}
+
+.qa-user-answer {
+  font-size: 0.88rem;
+  margin-bottom: 0.35rem;
+}
+
+.qa-user-answer span {
+  font-weight: 700;
+}
+
+.qa-user-answer.wrong-ans {
+  color: var(--danger);
+}
+
+.qa-correct-answer {
+  font-size: 0.88rem;
+  color: #065f46;
+  margin-bottom: 0.65rem;
+}
+
+.qa-correct-answer span {
+  font-weight: 700;
+}
+
+.qa-explanation-box {
+  background: var(--surface-alt);
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* Action Plan */
+.action-plan-box {
+  background: linear-gradient(135deg, var(--blue-50) 0%, var(--surface) 100%);
+  border: 1.5px solid var(--border-blue);
+  border-radius: var(--radius-xl);
+  padding: 2.25rem;
+  margin-bottom: 2.5rem;
+}
+
+.action-plan-box h4 {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--blue-900);
+  margin-bottom: 0.5rem;
+}
+
+.action-plan-box p.plan-sub {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+}
+
+.plan-steps-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.25rem;
+}
+
+.plan-step-card {
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.plan-step-num {
+  font-size: 0.82rem;
+  font-weight: 800;
+  color: var(--blue-700);
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.plan-step-card h6 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--blue-900);
+  margin-bottom: 0.35rem;
+}
+
+.plan-step-card p {
+  font-size: 0.84rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* Eval Bottom Buttons */
+.eval-actions-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1.5rem 0;
+}
+
+/* Modal for Certificate / Print Card */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(4px);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.modal-overlay.open {
+  display: flex;
+}
+
+.certificate-card {
+  background: #ffffff;
+  width: 100%;
+  max-width: 680px;
+  border-radius: var(--radius-xl);
+  padding: 3rem;
+  position: relative;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  border: 8px solid var(--blue-100);
+  background-image: radial-gradient(var(--blue-50) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.cert-close-btn {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  background: var(--surface-alt);
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+}
+
+.cert-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid var(--border-light);
+  padding-bottom: 1.5rem;
+}
+
+.cert-header h2 {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--blue-900);
+}
+
+.cert-header p {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}
+
+.cert-body {
+  text-align: center;
+}
+
+.cert-body p.cert-intro {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+}
+
+.cert-name {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--blue-900);
+  border-bottom: 2px solid var(--red-400);
+  display: inline-block;
+  padding: 0 1.5rem 0.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.cert-desc {
+  font-size: 0.95rem;
+  color: var(--text-main);
+  line-height: 1.6;
+  max-width: 520px;
+  margin: 0 auto 2rem;
+}
+
+.cert-footer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  border-top: 1px solid var(--border-light);
+  padding-top: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.cert-sign {
+  text-align: center;
+}
+
+.sign-title {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.sign-name {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--red-700);
+  margin-top: 1.5rem;
+}
+
+/* Footer */
+.site-footer {
+  background: #ffffff;
+  border-top: 1px solid var(--border-light);
+  margin-top: auto;
+  padding: 3rem 0 2rem;
+}
+
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.footer-brand h4 {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--blue-900);
+}
+
+.footer-brand h4 span {
+  color: var(--red-600);
+}
+
+.footer-brand p {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}
+
+.footer-jargon {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--blue-700);
+  font-style: italic;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 0.84rem;
+  color: var(--text-light);
+}
+
+.footer-bottom strong {
+  color: var(--red-700);
+}
+
+/* Responsive Media Queries */
+@media (max-width: 900px) {
+  .hero-section {
+    padding: 3rem 1.75rem;
+  }
+  .hero-title {
+    font-size: 2.2rem;
+  }
+  .hero-jargon {
+    font-size: 1.1rem;
+  }
+  .stepper-nav {
+    display: none;
+  }
+  .sectors-grid {
+    grid-template-columns: 1fr;
+  }
+  .eval-stats-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  .certificate-card, .certificate-card * {
+    visibility: visible;
+  }
+  .certificate-card {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    border: none;
+    box-shadow: none;
+  }
+  .cert-close-btn, .btn {
+    display: none !important;
+  }
+}
+
+</style>
+</head>
+<body>
+
+  <!-- Top Sticky Navigation Bar -->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <div class="brand-wrapper" onclick="window.ICHERI.navigateTo('home')">
+        <div class="brand-logo-icon">
+          <!-- Flask & Molecule SVG -->
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M10 2v7.31L4.69 19.3A2 2 0 0 0 6.44 22h11.12a2 2 0 0 0 1.75-2.7L14 9.31V2"/>
+            <path d="M8.5 2h7"/>
+            <path d="M7 16h10"/>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <h1>I-Cheri <span>Hub</span></h1>
+          <div class="author-badge">by <strong>Lia Indah</strong></div>
+        </div>
+      </div>
+
+      <!-- Navigation Stepper -->
+      <nav class="stepper-nav" aria-label="Alur Pembelajaran">
+        <button class="step-item active" data-step="home">
+          <span class="step-num">1</span> Beranda
+        </button>
+        <button class="step-item" data-step="sectors">
+          <span class="step-num">2</span> Pilihan Bidang
+        </button>
+        <button class="step-item" data-step="module">
+          <span class="step-num">3</span> Modul Regulasi
+        </button>
+        <button class="step-item" data-step="quiz">
+          <span class="step-num">4</span> Kuis Pemahaman
+        </button>
+        <button class="step-item" data-step="evaluation">
+          <span class="step-num">5</span> Evaluasi
+        </button>
+      </nav>
+
+      <!-- Nav Quick Actions -->
+      <div class="nav-actions">
+        <button class="btn btn-soft-blue" onclick="window.ICHERI.navigateTo('sectors')">
+          Pilih Bidang
+        </button>
+        <button class="btn btn-primary" onclick="window.ICHERI.openModule('pangan')">
+          Mulai Belajar ➔
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Wrapper -->
+  <main class="container">
+
+    <!-- ========================================================
+         PAGE 1: BERANDA / LANDING PAGE
+         ======================================================== -->
+    <section id="page-home" class="page-view active">
+      <!-- Hero Section -->
+      <div class="hero-section">
+        <div class="hero-glow-1"></div>
+        <div class="hero-glow-2"></div>
+        <div class="hero-content">
+          <div class="hero-pill">
+            <span class="dot"></span>
+            Industrial Chemistry Regulation Learning Hub
+          </div>
+          <h1 class="hero-title">
+            I-Cheri: Kuasai Regulasi Industri, <span class="accent-red">Bangun Akurasi Laboratorium.</span>
+          </h1>
+          <div class="hero-jargon">
+            Understand the standards, Build Laboratory Competence
+          </div>
+          <p class="hero-desc">
+            Platform pembelajaran regulasi kimia dan laboratorium industri terpadu karya <strong>Lia Indah</strong>. Dirancang khusus untuk mahasiswa, analis laboratorium, dan praktisi industri guna memahami persyaratan hukum, batas baku mutu analitik, serta tata kelola mutu laboratorium secara terstruktur, komprehensif, dan mudah dipahami.
+          </p>
+          <div class="hero-actions">
+            <button class="btn btn-primary" onclick="window.ICHERI.navigateTo('sectors')">
+              Jelajahi Pilihan Bidang Regulasi ➔
+            </button>
+            <button class="btn btn-soft-red" onclick="window.ICHERI.startQuizForSector('pangan')">
+              Uji Pemahaman Kuis Cepat ✍️
+            </button>
+          </div>
+
+          <div class="hero-meta-strip">
+            <div class="meta-item">
+              <div class="meta-icon-box">🏛️</div>
+              <span>Multi-Regulator (BPOM, KLHK, ESDM, Kemenaker)</span>
+            </div>
+            <div class="meta-item">
+              <div class="meta-icon-box">🔬</div>
+              <span>Standar Lab ISO/IEC 17025 & GLP</span>
+            </div>
+            <div class="meta-item">
+              <div class="meta-icon-box">📊</div>
+              <span>Kuis Interaktif & Remedial Otomatis</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature Highlights -->
+      <div class="section-header">
+        <span class="section-tag">Fitur Utama Platform</span>
+        <h2 class="section-title">Mengapa Belajar Regulasi di I-Cheri?</h2>
+        <p class="section-subtitle">
+          Regulasi industri seringkali dianggap rumit dan penuh pasal tebal. I-Cheri menyederhanakannya menjadi alur terstruktur yang aplikatif bagi analis laboratorium.
+        </p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon blue">📚</div>
+          <h3>Terstruktur Lintas Sektor Industri</h3>
+          <p>Mencakup industri pangan (BPOM), laboratorium lingkungan (KLHK), mineral pertambangan (ESDM), biosafety mikrobiologi, kosmetik (CPKB), hingga keselamatan bahan B3.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon red">🎯</div>
+          <h3>Parameter & Batas Baku Mutu Jelas</h3>
+          <p>Lengkap dengan instrumen analitik (AAS, HPLC, GC-MS, XRF), metode standar rujukan (SNI, AOAC, ASTM, USEPA), serta limit konsentrasi kritis yang wajib diawasi.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon blue">🔍</div>
+          <h3>Studi Kasus & Tindakan Korektif (CAPA)</h3>
+          <p>Pelajari kasus nyata deviasi pengujian industri kimia, identifikasi akar masalah (Root Cause Analysis), dan solusi pemecahannya secara profesional.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon red">🧠</div>
+          <h3>Kuis Cek Pemahaman Interaktif</h3>
+          <p>Uji kesiapan Anda dengan pertanyaan skenario dunia kerja nyata yang dilengkapi umpan balik langsung dan penjelasan yuridis-ilmiah.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon blue">📈</div>
+          <h3>Evaluasi & Rekomendasi Remedial</h3>
+          <p>Analisis otomatis bagian mana yang belum Anda kuasai, apa yang perlu dipelajari ulang, serta rencana aksi konkrit untuk menutup kesenjangan kompetensi.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon red">🎓</div>
+          <h3>Kartu Evaluasi Kompetensi Resmi</h3>
+          <p>Dapatkan ringkasan sertifikat kompetensi I-Cheri by Lia Indah yang dapat dicetak atau disimpan sebagai portofolio kesiapan karir analis laboratorium.</p>
+        </div>
+      </div>
+
+      <!-- Learning Flow -->
+      <div class="journey-banner">
+        <div class="section-header" style="margin-bottom: 1.5rem;">
+          <span class="section-tag">Alur Pembelajaran 4 Langkah</span>
+          <h3 class="section-title" style="font-size: 1.6rem;">Bagaimana I-Cheri Membimbing Anda</h3>
+        </div>
+
+        <div class="journey-steps">
+          <div class="journey-step-item">
+            <div class="step-circle">1</div>
+            <h4>Pilih Bidang Industri</h4>
+            <p>Pilih regulasi spesifik yang ingin Anda pelajari sesuai kebutuhan industri Anda.</p>
+          </div>
+          <div class="journey-step-item">
+            <div class="step-circle">2</div>
+            <h4>Pelajari Standar Mutu</h4>
+            <p>Pahami dasar hukum, parameter pengujian, checklist GLP, dan studi kasus.</p>
+          </div>
+          <div class="journey-step-item">
+            <div class="step-circle">3</div>
+            <h4>Kerjakan Kuis Kasus</h4>
+            <p>Jawab soal skenario realistis untuk memverifikasi kedalaman pemahaman Anda.</p>
+          </div>
+          <div class="journey-step-item">
+            <div class="step-circle">4</div>
+            <h4>Evaluasi & Remedial</h4>
+            <p>Ketahui bagian yang perlu dipelajari ulang dan unduh kartu kompetensi Anda.</p>
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 2.5rem;">
+          <button class="btn btn-primary" onclick="window.ICHERI.navigateTo('sectors')">
+            Mulai Dari Langkah 1: Pilih Bidang ➔
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         PAGE 2: PILIHAN BIDANG REGULASI
+         ======================================================== -->
+    <section id="page-sectors" class="page-view">
+      <div class="section-header">
+        <span class="section-tag">Katalog Bidang Industri</span>
+        <h2 class="section-title">Pilih Bidang Regulasi yang Ingin Dipelajari</h2>
+        <p class="section-subtitle">
+          Setiap sektor industri memiliki kerangka regulasi dan standar pengujian laboratorium yang unik. Pilih bidang di bawah untuk memulai pembelajaran mendalam.
+        </p>
+      </div>
+
+      <!-- Search & Filters -->
+      <div class="search-filter-bar">
+        <div class="search-box">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--text-muted);">
+            <circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/>
+          </svg>
+          <input type="text" id="sector-search-input" placeholder="Cari sektor atau regulasi (misal: BPOM, KLHK, Tambang, B3, Mikrobiologi)...">
+        </div>
+
+        <div class="filter-tags">
+          <button class="filter-btn active" data-filter="">Semua Bidang</button>
+          <button class="filter-btn" data-filter="BPOM">Pangan & BPOM</button>
+          <button class="filter-btn" data-filter="KLHK">Lingkungan & AMDAL</button>
+          <button class="filter-btn" data-filter="Tambang">Mineral & Tambang</button>
+          <button class="filter-btn" data-filter="Mikrobiologi">Mikrobiologi</button>
+          <button class="filter-btn" data-filter="Kosmetik">Kosmetik</button>
+          <button class="filter-btn" data-filter="B3">B3 & K3</button>
+        </div>
+      </div>
+
+      <!-- Sectors Dynamic Grid Container -->
+      <div id="sectors-grid" class="sectors-grid">
+        <!-- Rendered by JavaScript -->
+      </div>
+    </section>
+
+    <!-- ========================================================
+         PAGE 3: MODUL REGULASI SPESIFIK & TERSTRUKTUR
+         ======================================================== -->
+    <section id="page-module" class="page-view">
+      <!-- Breadcrumb Nav -->
+      <div style="margin-bottom: 1.5rem;">
+        <button class="btn btn-outline btn-sm" onclick="window.ICHERI.navigateTo('sectors')">
+          ← Kembali ke Pilihan Bidang
+        </button>
+      </div>
+
+      <!-- Module Top Card -->
+      <div class="module-header-card">
+        <div class="module-title-area">
+          <span class="sector-badge badge-blue" id="module-badge-tag" style="margin-bottom: 0.75rem; display: inline-block;">BPOM & SNI</span>
+          <h2 id="module-title-text">Industri Pangan & Minuman</h2>
+          <p id="module-lead-text">
+            Regulasi keamanan pangan olahan, batas cemaran kimia & mikroba, bahan tambahan pangan (BTP), label informasi gizi, dan sistem jaminan mutu HACCP/ISO 22000.
+          </p>
+        </div>
+
+        <div class="module-quick-select">
+          <label for="module-sector-dropdown" style="font-size: 0.85rem; font-weight: 700; color: var(--text-muted);">Pindah Bidang:</label>
+          <select id="module-sector-dropdown" class="module-select-dropdown">
+            <!-- Rendered by JavaScript -->
+          </select>
+        </div>
+      </div>
+
+      <!-- Sub-tabs Navigation -->
+      <div class="module-tabs" role="tablist">
+        <button class="tab-btn active" data-tab="legal">
+          <span class="tab-btn-icon">📜</span> 1. Dasar Hukum & Regulasi
+        </button>
+        <button class="tab-btn" data-tab="params">
+          <span class="tab-btn-icon">🔬</span> 2. Parameter & Baku Mutu Lab
+        </button>
+        <button class="tab-btn" data-tab="checklist">
+          <span class="tab-btn-icon">✅</span> 3. Checklist GLP & Prosedur Lab
+        </button>
+        <button class="tab-btn" data-tab="case">
+          <span class="tab-btn-icon">📋</span> 4. Studi Kasus & Solusi (CAPA)
+        </button>
+        <button class="tab-btn" data-tab="flashcards">
+          <span class="tab-btn-icon">💡</span> 5. Flashcards Poin Kritis
+        </button>
+      </div>
+
+      <!-- TAB 1: DASAR HUKUM -->
+      <div id="tab-panel-legal" class="tab-panel active">
+        <div style="margin-bottom: 1.5rem;">
+          <h3 style="font-size: 1.3rem; font-weight: 800; color: var(--blue-900); margin-bottom: 0.35rem;">Kerangka Hukum & Payung Regulasi Resmi</h3>
+          <p style="color: var(--text-muted); font-size: 0.92rem;">Daftar undang-undang dan peraturan pemerintah yang menjadi acuan kepatuhan laboratorium di industri ini.</p>
+        </div>
+        <div id="module-legal-list" class="legal-basis-list">
+          <!-- Rendered by JS -->
+        </div>
+      </div>
+
+      <!-- TAB 2: PARAMETER & STANDAR UJI -->
+      <div id="tab-panel-params" class="tab-panel">
+        <div style="margin-bottom: 1.5rem;">
+          <h3 style="font-size: 1.3rem; font-weight: 800; color: var(--blue-900); margin-bottom: 0.35rem;">Parameter Pengujian Laboratorium & Batas Baku Mutu</h3>
+          <p style="color: var(--text-muted); font-size: 0.92rem;">Spesifikasi instrumen pengujian, batas konsentrasi regulasi, dan metode standar acuan resmi.</p>
+        </div>
+        <div class="parameters-table-wrap">
+          <table class="parameters-table">
+            <thead>
+              <tr>
+                <th style="width: 25%;">Parameter & Instrumen</th>
+                <th style="width: 20%;">Standar Acuan (SNI/AOAC)</th>
+                <th style="width: 25%;">Batas Baku Mutu Regulasi</th>
+                <th style="width: 30%;">Arti Penting & Catatan Analitik</th>
+              </tr>
+            </thead>
+            <tbody id="module-params-tbody">
+              <!-- Rendered by JS -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- TAB 3: CHECKLIST GLP -->
+      <div id="tab-panel-checklist" class="tab-panel">
+        <div style="margin-bottom: 1.5rem;">
+          <h3 style="font-size: 1.3rem; font-weight: 800; color: var(--blue-900); margin-bottom: 0.35rem;">Checklist Prosedur & Good Laboratory Practice (GLP)</h3>
+          <p style="color: var(--text-muted); font-size: 0.92rem;">Langkah wajib penjaminan mutu analitik (Quality Assurance & Quality Control) sebelum merilis hasil uji.</p>
+        </div>
+        <div id="module-checklist-wrap" class="checklist-container">
+          <!-- Rendered by JS -->
+        </div>
+      </div>
+
+      <!-- TAB 4: STUDI KASUS -->
+      <div id="tab-panel-case" class="tab-panel">
+        <div style="margin-bottom: 1.5rem;">
+          <h3 style="font-size: 1.3rem; font-weight: 800; color: var(--blue-900); margin-bottom: 0.35rem;">Studi Kasus Deviasi di Industri & Investigasi CAPA</h3>
+          <p style="color: var(--text-muted); font-size: 0.92rem;">Simulasi permasalahan nyata di lantai produksi dan laboratorium serta analisis akar penyebabnya.</p>
+        </div>
+        <div id="module-case-wrap">
+          <!-- Rendered by JS -->
+        </div>
+      </div>
+
+      <!-- TAB 5: FLASHCARDS -->
+      <div id="tab-panel-flashcards" class="tab-panel">
+        <div style="margin-bottom: 1.5rem;">
+          <h3 style="font-size: 1.3rem; font-weight: 800; color: var(--blue-900); margin-bottom: 0.35rem;">Kartu Hafalan Cepat (Interactive Flashcards)</h3>
+          <p style="color: var(--text-muted); font-size: 0.92rem;">Klik kartu di bawah untuk membalik dan melihat intisari jawaban poin kritis regulasi.</p>
+        </div>
+        <div id="module-flashcards-wrap" class="flashcards-grid">
+          <!-- Rendered by JS -->
+        </div>
+      </div>
+
+      <!-- Module Bottom Action Bar -->
+      <div class="module-bottom-bar">
+        <div>
+          <h4 style="font-size: 1.1rem; font-weight: 800; color: var(--blue-900);">Siap Menguji Pemahaman Anda?</h4>
+          <p style="font-size: 0.88rem; color: var(--text-muted);">Uji penguasaan standar regulasi bidang ini melalui 5 studi kasus analitis.</p>
+        </div>
+        <div style="display: flex; gap: 0.75rem;">
+          <button class="btn btn-outline" onclick="window.ICHERI.navigateTo('sectors')">
+            Pilih Bidang Lain
+          </button>
+          <button class="btn btn-accent" onclick="window.ICHERI.startQuizForSector()">
+            Lanjut ke Kuis Pemahaman ➔
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         PAGE 4: KUIS PEMAHAMAN REGULASI
+         ======================================================== -->
+    <section id="page-quiz" class="page-view">
+      <div class="quiz-container">
+        <!-- Quiz Header Info -->
+        <div class="quiz-header-card">
+          <div class="quiz-meta-row">
+            <div class="quiz-sector-badge">
+              <span>🎯 Bidang:</span>
+              <strong id="quiz-sector-name">Industri Pangan & Minuman</strong>
+            </div>
+            <div class="quiz-progress-text" id="quiz-progress-text">
+              Pertanyaan 1 dari 5
+            </div>
+          </div>
+          <div class="progress-bar-track">
+            <div class="progress-bar-fill" id="quiz-progress-fill" style="width: 20%;"></div>
+          </div>
+        </div>
+
+        <!-- Question Card -->
+        <div class="question-card">
+          <div class="question-number-pill" id="quiz-q-number">Soal Kasus #1</div>
+          <h3 class="question-text" id="quiz-q-text">
+            Memuat pertanyaan kuis...
+          </h3>
+
+          <!-- Options Container -->
+          <div class="options-list" id="quiz-options-list">
+            <!-- Rendered by JS -->
+          </div>
+
+          <!-- Immediate Feedback Box -->
+          <div class="quiz-feedback-box" id="quiz-feedback-box">
+            <!-- Rendered by JS on click -->
+          </div>
+        </div>
+
+        <!-- Quiz Navigation Controls -->
+        <div class="quiz-nav-row">
+          <button class="btn btn-outline" onclick="window.ICHERI.navigateTo('module')">
+            ← Kembali Baca Modul
+          </button>
+          <button class="btn btn-primary" id="quiz-next-btn">
+            Pertanyaan Selanjutnya ➔
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         PAGE 5: EVALUASI KUIS & ACTION PLAN
+         ======================================================== -->
+    <section id="page-evaluation" class="page-view">
+      <div class="eval-container">
+        <!-- Summary Score Card -->
+        <div class="eval-summary-card">
+          <div class="score-circle-wrapper">
+            <div class="score-num" id="eval-score-num">80%</div>
+            <div class="score-max">Skor Akhir</div>
+          </div>
+
+          <div class="competence-badge badge-proficient" id="eval-competence-badge">
+            Kompeten - Standar Regulasi Dikuasai
+          </div>
+
+          <h2 class="eval-headline" id="eval-headline">
+            Evaluasi Hasil Pembelajaran Regulasi
+          </h2>
+          <p class="eval-subheadline" id="eval-subheadline">
+            Berikut adalah rekapitulasi capaian kompetensi Anda pada bidang <strong id="eval-sector-title">Industri Pangan & Minuman</strong>.
+          </p>
+
+          <div class="eval-stats-grid">
+            <div class="eval-stat-box">
+              <h5>Total Soal Diuji</h5>
+              <p id="eval-stat-total">5</p>
+            </div>
+            <div class="eval-stat-box">
+              <h5 style="color: #059669;">Jawaban Tepat</h5>
+              <p id="eval-stat-correct" style="color: #059669;">4</p>
+            </div>
+            <div class="eval-stat-box">
+              <h5 style="color: var(--red-600);">Perlu Penguatan</h5>
+              <p id="eval-stat-wrong" style="color: var(--red-600);">1</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- "Apa yang Perlu Dipelajari Ulang" (Remedial Gap Analysis) -->
+        <div class="remedial-section" id="eval-remedial-section">
+          <div class="remedial-header">
+            <div class="remedial-icon">⚠️</div>
+            <div>
+              <h3>Apa yang Perlu Dipelajari Ulang? (Analisis Celah Kompetensi)</h3>
+              <p>Berdasarkan jawaban kuis Anda, berikut adalah topik dan regulasi spesifik yang belum dikuasai secara optimal:</p>
+            </div>
+          </div>
+
+          <div class="remedial-list" id="eval-remedial-list">
+            <!-- Rendered by JS -->
+          </div>
+        </div>
+
+        <!-- Question Review Accordion / List -->
+        <div class="breakdown-section">
+          <h3>Rincian Jawaban & Pembahasan Regulasi Lengkap</h3>
+          <div id="eval-breakdown-list">
+            <!-- Rendered by JS -->
+          </div>
+        </div>
+
+        <!-- 3-Step Action Plan -->
+        <div class="action-plan-box">
+          <h4>Rencana Aksi Membangun Kompetensi Laboratorium</h4>
+          <p class="plan-sub">Langkah praktis yang direkomendasikan Lia Indah untuk memperkuat keandalan teknis analis:</p>
+
+          <div class="plan-steps-list">
+            <div class="plan-step-card">
+              <div class="plan-step-num">Langkah 1</div>
+              <h6>Review Dokumen Resmi</h6>
+              <p>Unduh lembar dokumen asli (Peraturan BPOM/Permen LHK/SNI) dan baca pasal terkait baku mutu serta toleransi uji.</p>
+            </div>
+            <div class="plan-step-card">
+              <div class="plan-step-num">Langkah 2</div>
+              <h6>Praktikkan Kontrol Mutu QC</h6>
+              <p>Lakukan verifikasi limit deteksi (LOD/LOQ) dan uji spike matrix recovery pada instrumen analisis Anda.</p>
+            </div>
+            <div class="plan-step-card">
+              <div class="plan-step-num">Langkah 3</div>
+              <h6>Ikuti Uji Banding Antar-Lab</h6>
+              <p>Latih kehandalan prosedur analisis melalui program uji profisiensi eksternal (PTP) terakreditasi KAN.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="eval-actions-bar">
+          <button class="btn btn-primary" onclick="window.ICHERI.openCertificateModal()">
+            Cetak / Simpan Kartu Hasil Belajar 🎓
+          </button>
+          <button class="btn btn-soft-red" onclick="window.ICHERI.startQuizForSector()">
+            Ulangi Kuis Bidang Ini 🔄
+          </button>
+          <button class="btn btn-outline" onclick="window.ICHERI.navigateTo('sectors')">
+            Pelajari Bidang Industri Lainnya ➔
+          </button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Modal: Certificate / Kartu Evaluasi Kompetensi -->
+  <div class="modal-overlay" id="certificate-modal">
+    <div class="certificate-card">
+      <button class="cert-close-btn" onclick="window.ICHERI.closeCertificateModal()">✕</button>
+      
+      <div class="cert-header">
+        <h2>KARTU EVALUASI KOMPETENSI I-CHERI</h2>
+        <p>Industrial Chemistry Regulation Learning Hub &bull; Verifikasi Mandiri</p>
+      </div>
+
+      <div class="cert-body">
+        <p class="cert-intro">Diberikan kepada:</p>
+        <div class="cert-name" id="cert-user-name">Peserta Pelatihan I-Cheri</div>
+        <p class="cert-desc">
+          Telah berhasil menyelesaikan modul pembelajaran dan evaluasi standar regulasi industri pada bidang <strong id="cert-sector-name">Industri Pangan & Minuman</strong> dengan hasil memuaskan.
+        </p>
+
+        <div style="background: var(--blue-50); padding: 0.75rem 1.25rem; border-radius: var(--radius-md); display: inline-block; margin-bottom: 1.5rem; border: 1px solid var(--border-blue);">
+          <strong id="cert-score-text" style="color: var(--blue-800); font-size: 1rem;">Skor Evaluasi Kompetensi: 100%</strong>
+        </div>
+      </div>
+
+      <div class="cert-footer">
+        <div>
+          <div class="sign-title">Tanggal Penerbitan</div>
+          <div id="cert-date-text" style="font-weight: 700; color: var(--blue-900); margin-top: 0.5rem;">6 November 2026</div>
+          <div style="font-size: 0.75rem; color: var(--text-light); margin-top: 0.25rem;">I-Cheri Verification ID: #ICH-2026-REG</div>
+        </div>
+
+        <div class="cert-sign">
+          <div class="sign-title">Pembuat Kurikulum I-Cheri</div>
+          <div class="sign-name">Lia Indah</div>
+          <div style="font-size: 0.75rem; color: var(--text-muted); font-style: italic;">"Understand the standards, Build Laboratory Competence"</div>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 2rem;">
+        <button class="btn btn-primary" onclick="window.ICHERI.printCertificate()">
+          🖨️ Cetak / Simpan sebagai PDF
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <h4>I-Cheri <span>Hub</span></h4>
+          <p>Industrial Chemistry Regulation Learning Hub</p>
+        </div>
+        <div class="footer-jargon">
+          "Understand the standards, Build Laboratory Competence"
+        </div>
+        <div>
+          <button class="btn btn-soft-blue btn-sm" onclick="window.ICHERI.navigateTo('home')">
+            Kembali ke Atas ↑
+          </button>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2026 <strong>I-Cheri</strong> by <strong>Lia Indah</strong>. Platform Edukasi Regulasi & Standar Kimia Industri Indonesia.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script>
+/**
+ * I-Cheri (Industrial Chemistry Regulation Learning Hub)
+ * by Lia Indah
+ * Tagline: "Understand the standards, Build Laboratory Competence"
+ * Database Regulasi, Modul Pembelajaran, dan Soal Kuis Interaktif
+ */
+
+const ICHEREI_DATA = {
+  sectors: [
+    {
+      id: "pangan",
+      title: "Industri Pangan & Minuman",
+      shortTitle: "Pangan & BPOM",
+      badge: "BPOM & SNI",
+      icon: "utensils",
+      colorType: "soft-blue",
+      leadDesc: "Regulasi keamanan pangan olahan, batas cemaran kimia & mikroba, bahan tambahan pangan (BTP), label informasi gizi, dan sistem jaminan mutu HACCP/ISO 22000.",
+      regulators: ["BPOM RI", "Kementerian Kesehatan", "BSN (SNI)", "BPJPH (Halal)"],
+      legalBasis: [
+        {
+          code: "UU No. 18 Tahun 2012",
+          title: "Undang-Undang tentang Pangan",
+          desc: "Payung hukum utama kedaulatan pangan, keamanan pangan, mutu, gizi, serta persyaratan label dan iklan pangan olahan di Indonesia."
+        },
+        {
+          code: "PerBPOM No. 11 Tahun 2019",
+          title: "Bahan Tambahan Pangan (BTP)",
+          desc: "Mengatur jenis BTP yang diizinkan, batas maksimal penggunaan (Acceptable Daily Intake / ADI), serta BTP terlarang seperti Asam Borat dan Formalin."
+        },
+        {
+          code: "PerBPOM No. 13 Tahun 2020",
+          title: "Batas Maksimal Cemaran Logam Berat dalam Pangan Olahan",
+          desc: "Menetapkan batas konsentrasi maksimum cemaran Timbal (Pb), Kadmium (Cd), Merkuri (Hg), Arsen (As), dan Timah (Sn) pada aneka kategori pangan."
+        },
+        {
+          code: "PerBPOM No. 22 Tahun 2019",
+          title: "Informasi Nilai Gizi (ING) pada Label Pangan",
+          desc: "Kewajiban pencantuman takaran saji, energi total, zat gizi makro (lemak, protein, karbohidrat), gula, garam/natrium, dan format pelabelan."
+        },
+        {
+          code: "SNI ISO 22000:2018",
+          title: "Sistem Manajemen Keamanan Pangan",
+          desc: "Harmonisasi internasional untuk pencegahan bahaya kimia, fisik, dan biologis di sepanjang rantai pasok industri pangan."
+        }
+      ],
+      coreParameters: [
+        {
+          param: "Logam Berat (Pb, Cd, Hg, As)",
+          instrument: "AAS (Atomic Absorption Spectrophotometry) / ICP-MS",
+          standardRef: "SNI 01-2896 (Uji Cemaran Logam) / AOAC 999.11",
+          limitExample: "Biskuit: Pb maks 0.20 mg/kg; Susu bubuk: Pb maks 0.02 mg/kg, Hg maks 0.01 mg/kg.",
+          importance: "Logam berat bersifat bioakumulatif dan neurotoksik; wajib divalidasi batas deteksi (LOD/LOQ) metodenya."
+        },
+        {
+          param: "Pengawet (Asam Benzoat, Asam Sorbat)",
+          instrument: "HPLC (High-Performance Liquid Chromatography) detektor UV-Vis",
+          standardRef: "SNI 01-2894 / AOAC Official Method 994.11",
+          limitExample: "Saus/Kecap: Asam benzoat maks 1000 mg/kg; Minuman berperisa: maks 400 mg/kg.",
+          importance: "Dosis berlebih dapat memicu reaksi alergi dan beban hepatotoksik. Pengujian memerlukan ekstraksi fase padat (SPE)."
+        },
+        {
+          param: "Mikotoksin (Aflatoksin B1 & Total)",
+          instrument: "HPLC-FLD dengan derivatisasi pasca-kolom atau ELISA",
+          standardRef: "AOAC 991.31 / PerBPOM Cemaran Biologi & Kimia",
+          limitExample: "Kacang tanah & jagung: Aflatoksin total maks 20 µg/kg, B1 maks 15 µg/kg.",
+          importance: "Karsinogenik golongan 1 (IARC). Analisis menuntut preparasi sampel yang homogen karena distribusi cemaran heterogen."
+        },
+        {
+          param: "Cemaran Mikroba Patogen",
+          instrument: "Inkubator mikrobiologi, Media selektif (XLD, Baird-Parker), PCR kit",
+          standardRef: "SNI ISO 6579 (Salmonella), SNI ISO 4833 (ALT)",
+          limitExample: "Salmonella sp.: Negatif / 25 gram; E. coli: < 3 APM/g.",
+          importance: "Indikator higienitas pengolahan dan potensi keracunan makanan akut bagi konsumen."
+        }
+      ],
+      labChecklist: [
+        "Verifikasi dan Uji Presisi & Akurasi: Lakukan spike matrix recovery (rentang keberterimaan 80-120%).",
+        "Sertifikasi Bahan Acuan (CRM): Selalu gunakan larutan standar primer tertelusur ke NIST atau KAN.",
+        "Kontrol Kontaminasi Silang: Preparasi sampel mikotoksin dan logam berat harus menggunakan alat gelas bebas kontaminan yang dibilas asam nitrat ($HNO_3$ 10%).",
+        "Dokumentasi Chain of Custody: Catat waktu kedatangan sampel, suhu penyimpanan (2-8°C untuk mikrobiologi), dan penanganan sampel komposit."
+      ],
+      caseStudy: {
+        title: "Kasus Deviasi Kadar Natrium Benzoat pada Produk Saus Cabai",
+        problem: "Tim QC menemukan hasil pengujian HPLC natrium benzoat sebesar 1.250 mg/kg (melebihi batas aman 1.000 mg/kg).",
+        rootCause: "Kalibrasi flow meter pompa dosing di ruang formulasi bergeser 15%, ditambah variasi evaporasi saat proses pemasakan batch.",
+        solution: "Tindakan Korektif (CAPA): Karantina batch produk, re-kalibrasi pompa metering, tambahkan kontrol intermediate testing sebelum proses pengisian (filling)."
+      },
+      flashcards: [
+        { front: "Apa perbedaan izin BPOM MD vs BPOM ML?", back: "BPOM MD: Pangan olahan hasil produksi dalam negeri berskala menengah-besar. BPOM ML: Pangan olahan hasil impor dari luar negeri." },
+        { front: "Berapa batas uji cemaran Salmonella pada produk susu?", back: "Wajib Negatif / 25 mL atau 25 gram produk (Toleransi Nol untuk patogen utama)." },
+        { front: "Zat pewarna tekstil apa yang sering disalahgunakan dan dilarang keras BPOM?", back: "Rhodamin B (pewarna merah sintetis) dan Metanil Yellow (pewarna kuning), bersifat karsinogenik dan iritan berat." }
+      ],
+      quiz: [
+        {
+          id: "p1",
+          question: "Berdasarkan Peraturan BPOM No. 13 Tahun 2020 tentang Cemaran Logam Berat, jika sebuah laboratorium pangan menguji produk biskuit dan memperoleh kadar Timbal (Pb) sebesar 0.35 mg/kg, bagaimana kesimpulan status kelulusan sampel tersebut jika batas maksimalnya adalah 0.20 mg/kg?",
+          options: [
+            "Memenuhi syarat (MS) karena nilai toleransi deviasi lab analitik hingga 0.50 mg/kg.",
+            "Tidak Memenuhi Syarat (TMS) karena melampaui batas maksimal 0.20 mg/kg yang ditetapkan regulasi.",
+            "Memenuhi syarat jika hasil uji mikrobiologi dan kadar air biskuit normal.",
+            "Dinyatakan indeterminate dan harus diganti dengan metode titrasi manual."
+          ],
+          correct: 1,
+          explanation: "Nilai batas maksimal cemaran Timbal (Pb) pada biskuit menurut PerBPOM 13/2020 adalah 0.20 mg/kg. Nilai 0.35 mg/kg secara yuridis Tidak Memenuhi Syarat (TMS) dan produk tidak boleh diedarkan.",
+          remedialTopic: "Batas Maksimal Cemaran Logam Berat (PerBPOM No. 13/2020) & Kriteria Keberterimaan Hasil Uji"
+        },
+        {
+          id: "p2",
+          question: "Dalam pengujian Bahan Tambahan Pangan (BTP) Pengawet dengan instrumen HPLC, mengapa penggunaan Blanko Matriks (Matrix Blank) dan Spike Recovery sangat diwajibkan oleh ISO/IEC 17025?",
+          options: [
+            "Untuk mempercepat waktu retensi kromatogram agar kromatografi selesai di bawah 2 menit.",
+            "Untuk memastikan matriks pangan (seperti lemak atau gula) tidak memberikan sinyal interferensi semu dan memastikan akurasi perolehan kembali analit.",
+            "Hanya untuk memenuhi syarat formalitas audit tanpa pengaruh teknis terhadap kalkulasi konsentrasi.",
+            "Agar instrumen HPLC tidak memerlukan pencucian pelarut organik setelah analisa."
+          ],
+          correct: 1,
+          explanation: "Pengujian pangan kaya matriks (lemak/karbohidrat) sering mengalami efek matriks (matrix effect). Blanko matriks dan spike recovery (target 80-120%) memvalidasi bahwa instrumen mendeteksi analit murni tanpa interferensi.",
+          remedialTopic: "Validasi Metode Pengujian BTP & Kontrol Mutu Analisis Kimia Instrumen"
+        },
+        {
+          id: "p3",
+          question: "Manakah dari kombinasi senyawa kimia berikut yang secara tegas DILARANG digunakan sebagai Bahan Tambahan Pangan oleh BPOM dan Kementerian Kesehatan?",
+          options: [
+            "Natrium benzoat dan Asam sitrat.",
+            "Asam askorbat dan Lesitin kedelai.",
+            "Asam Borat (Boraks) dan Formalin.",
+            "Kalsium propionat dan Beta-karoten."
+          ],
+          correct: 2,
+          explanation: "Asam borat (boraks) dan formalin merupakan bahan kimia berbahaya non-pangan yang dilarang keras digunakan sebagai pengawet atau pengenyal pangan berdasarkan UU Pangan dan Peraturan BPOM No. 11/2019.",
+          remedialTopic: "Daftar BTP yang Dilarang (Bahan Berbahaya Non-Pangan) vs BTP yang Diizinkan"
+        },
+        {
+          id: "p4",
+          question: "Pada label Informasi Nilai Gizi (ING) menurut PerBPOM No. 22 Tahun 2019, komponen mana yang WAJIB dicantumkan nilai absolut beserta persentase Angka Kecukupan Gizi (% AKG)-nya?",
+          options: [
+            "Hanya kandungan air dan abu total.",
+            "Energi total, Lemak total, Lemak jenuh, Protein, Karbohidrat total, Gula, dan Natrium.",
+            "Hanya vitamin C dan zat besi.",
+            "Semua asam amino esensial secara terperinci satu per satu."
+          ],
+          correct: 1,
+          explanation: "Format wajib tabel ING pangan olahan mencakup Takaran Saji, Jumlah Sajian per Kemasan, Energi Total, Energi dari Lemak, Lemak Total, Lemak Jenuh, Protein, Karbohidrat Total, Gula, dan Natrium.",
+          remedialTopic: "Regulasi Pelabelan Pangan Olahan & Format Baku Tabel Informasi Nilai Gizi"
+        },
+        {
+          id: "p5",
+          question: "Sebuah industri minuman sari apel menemukan cemaran Mikotoksin Patulin melebihi batas regulasi. Pada tahapan manakah Critical Control Point (CCP) paling efektif untuk mencegah risiko ini?",
+          options: [
+            "Penyemprotan disinfektan klorin pada kemasan botol sebelum dipacking.",
+            "Sortasi ketat buah apel segar bahan baku (menolak buah yang busuk, memar, atau berkapang) sebelum ekstraksi.",
+            "Peningkatan konsentrasi gula pemanis sintetik untuk menetralkan racun.",
+            "Penyimpanan produk jadi di ruangan terpapar sinar matahari langsung."
+          ],
+          correct: 1,
+          explanation: "Patulin diproduksi oleh kapang Penicillium expansum pada buah apel yang busuk/rusak. Patulin tahan panas pasteurisasi, sehingga satu-satunya pencegahan efektif adalah sortasi ketat buah bahan baku di awal proses.",
+          remedialTopic: "Penerapan HACCP, CCP Mikotoksin, dan Pengendalian Bahaya Kimiawi Pangan"
+        }
+      ]
+    },
+    {
+      id: "lingkungan",
+      title: "Laboratorium Lingkungan & AMDAL",
+      shortTitle: "Lingkungan & AMDAL",
+      badge: "KLHK & PP 22/2021",
+      icon: "trees",
+      colorType: "soft-red",
+      leadDesc: "Regulasi baku mutu air permukaan, air limbah industri, emisi udara, pengelolaan limbah B3, serta tata kelola laboratorium teregistrasi KLHK sesuai ISO/IEC 17025.",
+      regulators: ["Kementerian Lingkungan Hidup dan Kehutanan (KLHK)", "BSN / KAN", "Dinas Lingkungan Hidup (DLH)"],
+      legalBasis: [
+        {
+          code: "PP No. 22 Tahun 2021",
+          title: "Penyelenggaraan Perlindungan dan Pengelolaan Lingkungan Hidup",
+          desc: "Regulasi komprehensif turunan UU Cipta Kerja yang memuat Baku Mutu Air (Lampiran VI), Baku Mutu Udara Ambien (Lampiran VII), dan Baku Mutu Emisi."
+        },
+        {
+          code: "Permen LHK No. P.68 Tahun 2016",
+          title: "Baku Mutu Air Limbah Domestik",
+          desc: "Menetapkan batas konsentrasi pH (6-9), BOD (30 mg/L), COD (100 mg/L), TSS (30 mg/L), Minyak & Lemak (5 mg/L), Amonia (10 mg/L), dan Total Coliform (3000 MPN/100ml)."
+        },
+        {
+          code: "Permen LHK No. P.23 Tahun 2020",
+          title: "Laboratorium Lingkungan",
+          desc: "Persyaratan wajib akreditasi KAN (ISO/IEC 17025) dan registrasi identitas laboratorium lingkungan di KLHK untuk keabsahan laporan hasil uji (LHU)."
+        },
+        {
+          code: "Permen LHK No. 6 Tahun 2021",
+          title: "Tata Cara dan Persyaratan Pengelolaan Limbah B3",
+          desc: "Penetapan karakteristik limbah B3, uji TCLP, LD50, penyimpanan, simbol & label limbah B3, serta manifest elektronik (Festronik)."
+        }
+      ],
+      coreParameters: [
+        {
+          param: "BOD5 & COD (Chemical Oxygen Demand)",
+          instrument: "Inkubator BOD 20°C (Metode Titrasi Winkler/DO Meter) & Spektrofotometer Refluks Tertutup",
+          standardRef: "SNI 6989.72:2009 (BOD) & SNI 6989.2:2019 (COD)",
+          limitExample: "BOD air limbah domestik maks 30 mg/L; COD maks 100 mg/L.",
+          importance: "Indikator utama beban organik. Pada uji COD, interferensi klorida ($Cl^-$) tinggi harus dimasking dengan $HgSO_4$."
+        },
+        {
+          param: "TSS (Total Suspended Solids) & TDS",
+          instrument: "Oven pengering 103-105°C, Neraca Analitik 4 desimal, Kertas saring fiber glass",
+          standardRef: "SNI 6989.3:2019 (TSS gravimetri)",
+          limitExample: "TSS air limbah maks 30-100 mg/L tergantung jenis industri.",
+          importance: "Partikel tersuspensi menghalangi penetrasi sinar matahari dan merusak ekosistem perairan."
+        },
+        {
+          param: "Logam Berat Air & TCLP Limbah B3",
+          instrument: "AAS Flame / Graphite Furnace, ICP-OES, Agitator Rotari TCLP",
+          standardRef: "USEPA Method 1311 (TCLP) / SNI 6989.16 (Kadmium)",
+          limitExample: "Baku Mutu TCLP: Pb maks 5 mg/L, Cd maks 1 mg/L, Hg maks 0.2 mg/L.",
+          importance: "Menentukan apakah limbah padat industri dikategorikan sebagai Limbah B3 Kategori 1, 2, atau Non-B3."
+        },
+        {
+          param: "Partikulat Udara Ambien (PM2.5 & PM10)",
+          instrument: "High Volume Air Sampler (HVAS), Beta Attenuation Monitor (BAM)",
+          standardRef: "PP No. 22/2021 Lampiran VII (Udara Ambien)",
+          limitExample: "PM2.5 (24 jam): maks 55 µg/$m^3$; PM10 (24 jam): maks 75 µg/$m^3$.",
+          importance: "Partikulat halus mampu menembus alveolus paru-paru dan pembuluh darah manusia."
+        }
+      ],
+      labChecklist: [
+        "Pengawetan Sampel Lapangan: Sampel COD wajib diawetkan dengan $H_2SO_4$ pekat hingga pH < 2 dan disimpan pada suhu ≤ 6°C.",
+        "Rantai Pengamanan Sampel (Chain of Custody): Form sampling lapangan harus ditandatangani pengambil sampel bersertifikat dan petugas penerima lab.",
+        "Pengujian Duplo dan CRM: Setiap batch 10 sampel wajib menyertakan 1 sampel duplikat dan 1 spike/CRM kontrol akurasi.",
+        "Pengelolaan Limbah Reagen Lab Sendiri: Reagen COD yang mengandung Merkuri dan Kromium heksavalen wajib ditampung dalam jeriken limbah B3 berlabel resmi."
+      ],
+      caseStudy: {
+        title: "Interferensi Klorida Tinggi pada Uji COD Air Limbah Industri Pengolahan Ikan",
+        problem: "Hasil uji COD laboratorium mencapai 2.800 mg/L, namun nilai BOD hanya 120 mg/L (rasio COD:BOD tidak masuk akal).",
+        rootCause: "Kadar klorida air limbah mencapai 5.000 mg/L yang bereaksi dengan kalium dikromat menghasilkan klorin bebas, memicu overestimasi nilai COD.",
+        solution: "Lakukan pengenceran bertingkat dan tambahkan $HgSO_4$ dengan rasio minimal 10:1 terhadap konsentrasi klorida sebelum digesti refluks."
+      },
+      flashcards: [
+        { front: "Apa perbedaan baku mutu air limbah vs baku mutu air permukaan?", back: "Baku mutu air limbah: Batas konsentrasi polutan pada aliran efluen buangan industri/domestik. Baku mutu air permukaan: Kondisi kualitas badan air penerima (sungai/danau) kelas 1-4." },
+        { front: "Apa tujuan utama uji TCLP (Toxicity Characteristic Leaching Procedure)?", back: "Mensimulasikan potensi pelindian zat toksik dari limbah padat saat berada di tempat penimbunan tanah (landfill) ke air tanah." },
+        { front: "Berapa batas baku mutu COD air limbah domestik menurut Permen LHK No. P.68/2016?", back: "Maksimal 100 mg/L, dengan BOD maksimal 30 mg/L dan pH rentang 6.0 - 9.0." }
+      ],
+      quiz: [
+        {
+          id: "l1",
+          question: "Berdasarkan Permen LHK No. P.68 Tahun 2016, parameter baku mutu air limbah domestik yang memiliki batas maksimum konsentrasi 100 mg/L adalah...",
+          options: [
+            "BOD (Biochemical Oxygen Demand)",
+            "COD (Chemical Oxygen Demand)",
+            "Minyak dan Lemak",
+            "Amonia ($NH_3$-N)"
+          ],
+          correct: 1,
+          explanation: "Sesuai Permen LHK P.68/2016, nilai batas maksimum COD adalah 100 mg/L, sedangkan BOD adalah 30 mg/L, Minyak & Lemak 5 mg/L, dan Amonia 10 mg/L.",
+          remedialTopic: "Baku Mutu Air Limbah Domestik (Permen LHK No. P.68/2016) dan Parameter Beban Organik"
+        },
+        {
+          id: "l2",
+          question: "Mengapa pengawetan sampel air untuk pengujian parameter COD (Chemical Oxygen Demand) di lapangan wajib diasamkan dengan asam sulfat ($H_2SO_4$) pekat hingga pH < 2 dan disimpan pada suhu ≤ 6°C?",
+          options: [
+            "Agar mikroorganisme pembusuk berkembang biak lebih cepat sehingga reaksi oksidasi alami selesai di botol.",
+            "Untuk menghentikan aktivitas biologis mikroorganisme yang dapat mengonsumsi bahan organik sebelum pengujian di lab.",
+            "Untuk melarutkan botol polietilen agar tercampur homogen dengan analit.",
+            "Hanya agar warna sampel menjadi lebih transparan untuk uji visual."
+          ],
+          correct: 1,
+          explanation: "Pengasaman hingga pH < 2 dan pendinginan ≤ 6°C bertujuan menginaktivasi aktivitas mikroba, mencegah degradasi bahan organik biodegradabel selama transportasi sampel menuju laboratorium.",
+          remedialTopic: "Preservasi, Handling, dan Chain of Custody Sampel Air Lingkungan (SNI 6989.57)"
+        },
+        {
+          id: "l3",
+          question: "Dalam uji karakterisasi limbah padat untuk penentuan status B3 (Bahan Berbahaya dan Beracun) menurut PP No. 22 Tahun 2021, prosedur pelindian laboratorium standar yang digunakan dinamakan...",
+          options: [
+            "Soxhlet Extraction Method",
+            "TCLP (Toxicity Characteristic Leaching Procedure)",
+            "Kjeldahl Nitrogen Digestion",
+            "Karl Fischer Volumetric Titration"
+          ],
+          correct: 1,
+          explanation: "USEPA Method 1311 / TCLP adalah prosedur ekstraksi standar yang diadopsi PP 22/2021 untuk mengukur konsentrasi logam berat dan senyawa organik toksik yang terlindi ke dalam larutan asam pengekstraksi.",
+          remedialTopic: "Regulasi Pengelolaan Limbah B3, Karakteristik Toksisitas, dan Uji Baku Mutu TCLP"
+        },
+        {
+          id: "l4",
+          question: "Analisis partikulat udara ambien PM2.5 menggunakan High Volume Air Sampler (HVAS) dilakukan dengan prinsip kerja pemisahan ukuran aerosol partikel aerodinamis yang memiliki diameter...",
+          options: [
+            "Tepat sama dengan 25 milimeter.",
+            "Sama dengan atau lebih kecil dari 2.5 mikrometer (µm).",
+            "Lebih besar dari 10 mikrometer.",
+            "Antara 2.5 hingga 10 milimeter."
+          ],
+          correct: 1,
+          explanation: "PM2.5 (Particulate Matter 2.5) merujuk pada partikel halus di udara ambien dengan diameter aerodinamis kurang dari atau sama dengan 2.5 mikrometer ($2.5 \\mu m$).",
+          remedialTopic: "Baku Mutu Udara Ambien PP 22/2021 Lampiran VII dan Metodologi Monitoring Kualitas Udara"
+        },
+        {
+          id: "l5",
+          question: "Sesuai Permen LHK No. P.23 Tahun 2020, sebuah laboratorium lingkungan swasta hanya berhak menerbitkan Laporan Hasil Uji (LHU) yang sah untuk keperluan pelaporan instansi pemerintah jika telah memenuhi syarat...",
+          options: [
+            "Telah beroperasi minimal 25 tahun tanpa perlu akreditasi eksternal.",
+            "Terakreditasi ISO/IEC 17025 oleh Komite Akreditasi Nasional (KAN) dan teregistrasi di KLHK.",
+            "Cukup memiliki izin usaha perdagangan (SIUP) dari dinas penanaman modal.",
+            "Hanya menggunakan peralatan buatan dalam negeri."
+          ],
+          correct: 1,
+          explanation: "Berdasarkan Permen LHK No. P.23/2020, laboratorium lingkungan wajib terakreditasi ISO/IEC 17025 oleh KAN dengan lingkup parameter lingkungan serta terdaftar/teregistrasi resmi di Kementerian LHK.",
+          remedialTopic: "Legalitas Laboratorium Lingkungan, Akreditasi KAN, dan Registrasi SILABI KLHK"
+        }
+      ]
+    },
+    {
+      id: "mineral",
+      title: "Industri Mineral, Batubara & Tambang",
+      shortTitle: "Mineral & Tambang",
+      badge: "ESDM & ISO 17025",
+      icon: "pickaxe",
+      colorType: "soft-blue",
+      leadDesc: "Kaidah teknik pertambangan yang baik (Good Mining Practice), analisis proksimat-ultimat batubara, assay bijih nikel laterit/emas, dan pengelolaan air asam tambang (AAT).",
+      regulators: ["Kementerian ESDM (Ditjen Minerba)", "Kementerian Perindustrian", "KAN", "BSN"],
+      legalBasis: [
+        {
+          code: "Permen ESDM No. 26 Tahun 2018",
+          title: "Pelaksanaan Kaidah Pertambangan yang Baik",
+          desc: "Kewajiban teknis eksplorasi, penambangan, pengolahan/pemurnian, keselamatan operasi, dan pengelolaan lingkungan hidup pertambangan."
+        },
+        {
+          code: "Kepmen ESDM No. 1827 K/30/MEM/2018",
+          title: "Pedoman Teknis Kaidah Teknik Pertambangan yang Baik",
+          desc: "Standar baku teknis laboratorium preparasi dan assay mineral, keselamatan bahan peledak, dan pengelolaan air tirisan tambang."
+        },
+        {
+          code: "UU No. 3 Tahun 2020",
+          title: "Perubahan atas UU No. 4/2009 tentang Pertambangan Minerba",
+          desc: "Kewajiban hilirisasi nilai tambah mineral di dalam negeri (pembangunan smelter nikel, tembaga, bauksit)."
+        },
+        {
+          code: "Standar ASTM D & ISO 17246",
+          title: "Coal Analysis and Mineral Assaying",
+          desc: "Standar baku internasional metode pengujian kadar abu, zat terbang, sulfur, nilai kalori, dan kadar unsur logam."
+        }
+      ],
+      coreParameters: [
+        {
+          param: "Kadar Nikel (Ni), Besi (Fe), Silika ($SiO_2$), Magnesia (MgO)",
+          instrument: "X-Ray Fluorescence (XRF) fused bead & ICP-OES / Titrimetri EDTA",
+          standardRef: "ISO 9516-1 (Iron ores by XRF) / SNI 13-6345 (Bijih Nikel Laterit)",
+          limitExample: "Saprolit (High Grade Ni): Ni ≥ 1.8%, rasio S/M ($SiO_2/MgO$) 1.8 - 2.2 untuk peleburan RKEF.",
+          importance: "Menentukan nilai komersial penjualan bijih dan parameter operasional terak pada tanur smelter."
+        },
+        {
+          param: "Analisis Proksimat Batubara (Moisture, Ash, VM, FC)",
+          instrument: "Proximate Analyzer otomatis / Muffle Furnace 815°C & Drying Oven 105°C",
+          standardRef: "ASTM D3172 / ISO 17246",
+          limitExample: "Batubara PLTU: Kadar abu (Ash) maks 8-12%, Total Moisture 25-35%.",
+          importance: "Parameter mutu pembakaran boiler dan perhitungan emisi abu terbang (fly ash) serta terak (bottom ash)."
+        },
+        {
+          param: "Gross Calorific Value (Nilai Kalori)",
+          instrument: "Isoperibol Bomb Calorimeter terkalibrasi Asam Benzoat standar",
+          standardRef: "ASTM D5865 / ISO 1928",
+          limitExample: "Sub-bituminus: 4.500 - 5.500 kcal/kg; Bituminus: > 6.000 kcal/kg.",
+          importance: "Faktor penentu harga indeks batubara acuan (HBA) dan efisiensi termal pembangkit listrik."
+        },
+        {
+          param: "Potensi Air Asam Tambang (AAT) - NAG & ANC",
+          instrument: "pH meter digital, Titrator otomatis, Pemanas digesti $H_2O_2$",
+          standardRef: "AMIRA ARD Test Handbook / Kepmen ESDM 1827 K/2018",
+          limitExample: "NAG pH < 4.5 dan NAPP positif: Dikategorikan Potentially Acid Forming (PAF).",
+          importance: "Mencegah terlarutnya logam berat beracun ke sungai sekitar tambang akibat oksidasi mineral pirit ($FeS_2$)."
+        }
+      ],
+      labChecklist: [
+        "Kontrol Kontaminasi Silang Preparasi Sampel: Bersihkan jaw crusher dan pulverizer dengan kuarsa/batu bersih di antara setiap batch sampel.",
+        "Uji Keseragaman Ukuran Partikel: Pastikan kehalusan serbuk sampel lolos ayakan 200 mesh (75 µm) minimal 95% sebelum fusi XRF atau pelarutan asam.",
+        "Kalibrasi Bomb Calorimeter: Hitung kapasitas panas (water equivalent) menggunakan tablet asam benzoat bersertifikat secara berkala.",
+        "Pengujian Duplo Sampling Split: Bagi sampel dengan Riffle Splitter dan uji minimal 10% sampel duplikat untuk verifikasi presisi sub-sampling."
+      ],
+      caseStudy: {
+        title: "Bias Negatif Analisis Kadar Nikel Akibat Kehilangan Berat Saat Pemijaran (LOI)",
+        problem: "Hasil assay Ni dengan XRF pressed pellet menunjukkan hasil 1.55%, padahal pengujian titrimetri kimia basah mencatat 1.72%.",
+        rootCause: "Efek mineralogi air kristal (Loss on Ignition / LOI tinggi 10-12%) pada bijih laterit limonit menyerap sinar fluoresensi X-ray.",
+        solution: "Beralih ke metode Fused Bead (fusi peleburan dengan flux litium tetraborat) pada suhu 1.050°C untuk mengeliminasi efek matriks dan LOI."
+      ],
+      flashcards: [
+        { front: "Apa itu mineral PAF (Potentially Acid Forming) pada batuan penutup tambang?", back: "Batuan yang mengandung mineral sulfida (seperti pirit FeS2) yang bila terpapar air dan udara akan membentuk asam sulfat (Air Asam Tambang)." },
+        { front: "Mengapa fusi kaca (fused bead) lebih disukai dibanding pressed pellet untuk uji XRF bijih mineral?", back: "Karena fusi pada suhu tinggi menghilangkan efek ukuran partikel (granulometri) dan efek mineralogi/LOI sehingga akurasi jauh lebih tinggi." },
+        { front: "Apa yang diukur dalam Gross Calorific Value (GCV) batubara?", back: "Total energi panas pembakaran per satuan massa, di mana air hasil pembakaran terkondensasi kembali menjadi cair pada suhu kamar." }
+      ],
+      quiz: [
+        {
+          id: "m1",
+          question: "Dalam analisis kualitas batubara menurut ASTM D3172, komponen yang TIDAK termasuk dalam perhitungan analisis proksimat (Proximate Analysis) adalah...",
+          options: [
+            "Inherent Moisture (Kandungan Lengas Bawaan)",
+            "Ash Content (Kadar Abu)",
+            "Volatile Matter (Zat Terbang)",
+            "Kadar Unsur Nitrogen dan Oksigen Ultimat"
+          ],
+          correct: 3,
+          explanation: "Analisis proksimat batubara hanya terdiri dari: Moisture, Ash, Volatile Matter, dan Fixed Carbon (dihitung selisih). Kadar Nitrogen, Hidrogen, dan Karbon murni masuk dalam Analisis Ultimat.",
+          remedialTopic: "Perbedaan Parameter Analisis Proksimat vs Ultimat Batubara (ASTM D3172/D3176)"
+        },
+        {
+          id: "m2",
+          question: "Pada fasilitas laboratorium pengolahan bijih nikel laterit (smelter RKEF), mengapa rasio Silika terhadap Magnesia ($SiO_2/MgO$) pada umpan saprolit wajib dikontrol ketat oleh tim lab kimia?",
+          options: [
+            "Agar batuan nikel berubah warna menjadi emas murni.",
+            "Untuk mengontrol viskositas dan titik leleh terak (slag) di dalam electric furnace agar proses peleburan efisien dan tidak merusak refractory lining.",
+            "Untuk mempercepat proses pembekuan feronikel menjadi gas.",
+            "Hanya untuk memenuhi syarat estetika penumpukan bijih di stockpile."
+          ],
+          correct: 1,
+          explanation: "Rasio $SiO_2/MgO$ (biasanya ditargetkan 1.8 - 2.2) menentukan sifat asam/basa terak, titik leleh, dan viskositas slag di dalam tungku tanur listrik smelter nikel.",
+          remedialTopic: "Kimia Metalurgi Ekstraksi Nikel, Karakteristik Slag, dan Parameter Assay XRF"
+        },
+        {
+          id: "m3",
+          question: "Fenomena Air Asam Tambang (Acid Mine Drainage) terjadi terutama akibat reaksi oksidasi mineral sulfida oleh air dan oksigen atmosfer. Mineral sulfida yang paling umum memicu kondisi ini adalah...",
+          options: [
+            "Kuarsa ($SiO_2$)",
+            "Kalsit ($CaCO_3$)",
+            "Pirit ($FeS_2$)",
+            "Bauksit ($Al_2O_3\\cdot 2H_2O$)"
+          ],
+          correct: 2,
+          explanation: "Pirit ($FeS_2$) adalah mineral sulfida besi yang bila terpapar oksigen dan air akan teroksidasi menghasilkan ion $H^+$ (asam sulfat) dan melarutkan logam berat toksik.",
+          remedialTopic: "Kaidah Teknik Pengelolaan Lingkungan Tambang & Uji Geokimia Air Asam Tambang"
+        },
+        {
+          id: "m4",
+          question: "Dalam preparasi sampel batuan mineral untuk analisis laboratorium, tindakan krusial apa yang wajib dilakukan untuk mencegah bias akibat kontaminasi silang (cross-contamination) antar sampel berkadar tinggi dan rendah?",
+          options: [
+            "Mencuci mesin penghancur (crusher/pulverizer) dengan cairan sirup glukosa.",
+            "Membersihkan ruang penghancur dengan kuarsa bersih/blanko batu dan penyemprotan udara bertekanan di antara setiap sampel.",
+            "Menggiling semua sampel bersamaan dalam satu wadah besar.",
+            "Menghilangkan tahap pengeringan sampel di oven."
+          ],
+          correct: 1,
+          explanation: "Pembersihan rutin menggunakan material pembersih abrasif netral (seperti pasir silika/kuarsa murni) dan tiupan kompresor udara adalah prosedur standar QA/QC preparasi mineral.",
+          remedialTopic: "Standar Prosedur Preparasi Sampel Geologi dan Kontrol Mutu QA/QC Laboratorium Tambang"
+        },
+        {
+          id: "m5",
+          question: "Berdasarkan Kepmen ESDM No. 1827 K/30/MEM/2018, laboratorium pengujian pertambangan yang bertindak sebagai umpire (laboratorium wasit dalam sengketa transaksi komersial) wajib memenuhi kualifikasi...",
+          options: [
+            "Dimiliki oleh pembeli luar negeri tanpa legalitas di Indonesia.",
+            "Terakreditasi ISO/IEC 17025 oleh Komite Akreditasi Nasional (KAN) untuk lingkup komoditas yang disengketakan.",
+            "Cukup memiliki surat pernyataan dari kepala teknik tambang (KTT).",
+            "Laboratorium tidak memerlukan metode uji standar nasional maupun internasional."
+          ],
+          correct: 1,
+          explanation: "Laboratorium wasit (umpire lab) wajib memiliki akreditasi formal ISO/IEC 17025 dari badan akreditasi berwenang (KAN di Indonesia) pada lingkup parameter yang diuji agar keputusannya sah secara hukum perikatan perdata.",
+          remedialTopic: "Regulasi Good Mining Practice ESDM dan Syarat Kompetensi Laboratorium Umpire"
+        }
+      ]
+    },
+    {
+      id: "mikrobiologi",
+      title: "Mikrobiologi Industri & Biosafety",
+      shortTitle: "Mikrobiologi & Biosafety",
+      badge: "ISO 7218 & Farmakope",
+      icon: "microscope",
+      colorType: "soft-red",
+      leadDesc: "Standar Biosafety Level (BSL 1-4), validasi ruang bersih (cleanroom ISO 14644), pengujian cemaran mikroba patogen, sterilitas media, dan kontrol biokontaminasi industri.",
+      regulators: ["BPOM RI", "Kementerian Kesehatan", "WHO Biosafety", "BSN / ISO"],
+      legalBasis: [
+        {
+          code: "Permenkes & WHO Biosafety Manual",
+          title: "Laboratory Biosafety Manual (4th Edition)",
+          desc: "Pengelompokan tingkat risiko agen biologis (Risk Group 1 - 4) dan desain fasilitas Biosafety Level (BSL-1 sampai BSL-4)."
+        },
+        {
+          code: "Farmakope Indonesia Edisi VI",
+          title: "Uji Batas Mikroba & Uji Efektivitas Pengawet",
+          desc: "Metode resmi pengujian mikroba spesifik pada produk farmasi, bahan baku, dan sediaan topikal/oral."
+        },
+        {
+          code: "SNI ISO 7218:2012",
+          title: "Persyaratan Umum Pemeriksaan Mikrobiologi",
+          desc: "Pedoman tata letak lab mikrobiologi, verifikasi autoklaf, sterilisasi alat, dan kompetensi personel penguji kultur."
+        },
+        {
+          code: "ISO 14644-1:2015",
+          title: "Cleanrooms and Associated Controlled Environments",
+          desc: "Klasifikasi kebersihan udara berdasarkan konsentrasi partikel airborne (Kelas A, B, C, D / ISO Class 5-8)."
+        }
+      ],
+      coreParameters: [
+        {
+          param: "Angka Lempeng Total (ALT / TVC) & AKK",
+          instrument: "Inkubator 30-35°C (Bakteri) & 20-25°C (Kapang/Khamir), Colony Counter",
+          standardRef: "SNI ISO 4833-1:2015 / BAM FDA Bab 3",
+          limitExample: "Air minum dalam kemasan: ALT maks 1.0 x $10^2$ koloni/mL; Jamu: ALT < $10^4$ koloni/g.",
+          importance: "Indikator umum beban mikrobiologis dan efektivitas proses termal/sanitasi produksi."
+        },
+        {
+          param: "Deteksi Patogen Spesifik (Salmonella, E. coli, S. aureus)",
+          instrument: "Laminar Air Flow / BSC Kelas II, Media Diferensial (BPW, RVS, XLD, MSA)",
+          standardRef: "ISO 6579 (Salmonella), ISO 21567 (Shigella)",
+          limitExample: "Salmonella: Wajib Negatif / 25 g; S. aureus: < 10 CFU/g.",
+          importance: "Bakteri patogen memproduksi enterotoksin berbahaya dan menjadi penyebab utama penarikan produk (recall)."
+        },
+        {
+          param: "Uji Fertilitas & Sterilitas Media (Growth Promotion Test)",
+          instrument: "Strain mikroba acuan ATCC (American Type Culture Collection)",
+          standardRef: "Farmakope Indonesia VI Bab <51> & <61>",
+          limitExample: "Inokulum mikroba kontrol < 100 CFU harus tumbuh subur dalam waktu inkubasi standar.",
+          importance: "Menghindari hasil negatif palsu (false negative) akibat batch media agar yang rusak atau pH media tidak tepat."
+        },
+        {
+          param: "Monitoring Lingkungan Bersih (Settle Plates & Air Sampler)",
+          instrument: "Air Sampler Mikrobiologi Impaksi, Cawan kontak (RODAC Plate)",
+          standardRef: "CPOB / CPKB / ISO 14698",
+          limitExample: "Ruang Kelas A: < 1 CFU per cawan kontak/cawan papar (kondisi aseptis total).",
+          importance: "Menjamin udara ruang pengisian steril terbebas dari partikel hidup pembawa spora mikroba."
+        }
+      ],
+      labChecklist: [
+        "Validasi Siklus Autoklaf: Gunakan indikator biologis spora Geobacillus stearothermophilus untuk validasi sterilisasi basah 121°C selama 15 menit.",
+        "Tata Aliran Udara Bertekanan Positif/Negatif: Ruang inokulasi kultur murni harus bertekanan positif terhadap koridor, kecuali untuk patogen berbahaya (BSL-3).",
+        "Disinfeksi Berkala Laminar Flow/BSC: Bersihkan permukaan BSC dengan etanol 70% steril sebelum dan sesudah bekerja, serta lampu UV 254 nm minimal 30 menit.",
+        "Dekontaminasi Limbah Biohazard: Semua sisa cawan petri berisi kultur kuman wajib diautoklaf (121°C 30 menit) sebelum dibuang ke kantong limbah biohazard kuning."
+      ],
+      caseStudy: {
+        title: "False Positive Kontaminasi Kapang pada Uji Sterilitas Batch Sediaan Farmasi",
+        problem: "Sebanyak 3 dari 10 vial uji sterilitas menunjukkan pertumbuhan Aspergillus niger setelah hari ke-5 inkubasi.",
+        rootCause: "HEPA filter pada Laminar Air Flow (LAF) kabinet telah mengalami kebocoran mikro pada segel gasket (ditemukan lewat uji asap/DOP test).",
+        solution: "Penggantian HEPA filter, uji integritas partikel (DOP/PAO test), fumigasi formaldehida/uap $H_2O_2$, dan re-kualifikasi area kerja aseptis."
+      ],
+      flashcards: [
+        { front: "Apa fungsi uji Growth Promotion Test (GPT) pada media mikrobiologi?", back: "Untuk membuktikan bahwa media perbenihan yang baru disiapkan mampu mendukung pertumbuhan mikroba dalam jumlah kecil (<100 CFU)." },
+        { front: "Mikroba apa yang dijadikan indikator biologis standar validasi autoklaf?", back: "Geobacillus stearothermophilus, karena endosporanya memiliki resistensi panas basah yang sangat tinggi pada 121°C." },
+        { front: "Mengapa etanol 70% lebih efektif sebagai disinfektan dibandingkan etanol 96% murni?", back: "Karena kandungan air 30% memperlambat evaporasi dan membantu koagulasi/denaturasi protein dinding sel mikroba secara optimal." }
+      ],
+      quiz: [
+        {
+          id: "mb1",
+          question: "Dalam validasi siklus sterilisasi autoklaf di laboratorium mikrobiologi industri, indikator biologis bersertifikat yang paling umum digunakan karena memiliki ketahanan panas basah tertinggi adalah spora dari...",
+          options: [
+            "Escherichia coli",
+            "Geobacillus stearothermophilus",
+            "Candida albicans",
+            "Lactobacillus acidophilus"
+          ],
+          correct: 1,
+          explanation: "Endospora Geobacillus stearothermophilus tahan terhadap suhu 121°C selama lebih dari 15 menit, menjadikannya standar baku emas untuk memverifikasi efektivitas siklus autoklaf.",
+          remedialTopic: "Validasi Siklus Sterilisasi Panas Basah & Penggunaan Indikator Biologis Laboratorium"
+        },
+        {
+          id: "mb2",
+          question: "Berdasarkan Farmakope Indonesia dan ISO 11133, tujuan utama pelaksanaan Growth Promotion Test (Uji Promosi Pertumbuhan) pada media agar baru sebelum digunakan untuk analisis sampel adalah...",
+          options: [
+            "Memastikan cawan petri tidak pecah saat ditumpuk di dalam lemari es.",
+            "Membuktikan bahwa media tersebut mampu menumbuhkan mikroorganisme target secara subur dengan inokulum mikroba rendah (< 100 CFU).",
+            "Mengukur apakah media dapat berubah warna menjadi ungu secara spontan.",
+            "Untuk membunuh semua bakteri bawaan tanpa menggunakan pemanas."
+          ],
+          correct: 1,
+          explanation: "Growth Promotion Test membuktikan fertilitas media kultur; jika media gagal menumbuhkan mikroba uji acuan, hasil uji sampel sesungguhnya berisiko menghasilkan kesimpulan negatif palsu (false negative).",
+          remedialTopic: "Kontrol Kualitas Media Mikrobiologi (ISO 11133) & Uji Fertilitas/Sterilitas"
+        },
+        {
+          id: "mb3",
+          question: "Di dalam laboratorium mikrobiologi pengujian patogen (seperti isolasi Salmonella sp.), peralatan Biosafety Cabinet (BSC) yang direkomendasikan untuk melindungi sampel, operator, dan lingkungan sekaligus adalah...",
+          options: [
+            "Fume Hood (Lemari Asam Kimia)",
+            "Laminar Air Flow (LAF) Aliran Horizontal Konvensional",
+            "Biosafety Cabinet (BSC) Kelas II",
+            "Kipas Exhaust Dinding Biasa"
+          ],
+          correct: 2,
+          explanation: "BSC Kelas II menggunakan tirai udara (air barrier) dan filtrasi HEPA ganda yang memberikan proteksi tiga arah: operator, produk sampel, dan lingkungan dari bahaya biohazard.",
+          remedialTopic: "Prinsip Kerja Biosafety Cabinet (BSC) vs Laminar Air Flow dan Klasifikasi Biohazard"
+        },
+        {
+          id: "mb4",
+          question: "Mengapa larutan alkohol 70% v/v secara ilmiah terbukti jauh lebih efektif sebagai agen disinfektan meja kerja mikrobiologi dibanding alkohol 96% murni?",
+          options: [
+            "Alkohol 96% langsung membakar meja laboratorium saat disemprotkan.",
+            "Kandungan air pada alkohol 70% mencegah koagulasi protein permukaan sel secara instan, sehingga alkohol dapat berpenetrasi ke dalam sel mikroba untuk mendenaturasi protein intinya.",
+            "Alkohol 70% memiliki aroma wangi yang mengusir serangga terbang.",
+            "Alkohol 96% terlalu encer untuk membunuh dinding sel bakteri gram negatif."
+          ],
+          correct: 1,
+          explanation: "Alkohol 96% murni menguap sangat cepat dan menyebabkan koagulasi protein dinding sel terluar secara instan yang justru melindungi bagian dalam sel. Air pada konsentrasi 70% memfasilitasi penetrasi intraseluler.",
+          remedialTopic: "Mekanisme Disinfeksi Kimiawi, Konsentrasi Efektif, dan Antisepsis Laboratorium"
+        },
+        {
+          id: "mb5",
+          question: "Menurut pedoman CPOB/CPKB pada pemantauan area bersih (Cleanroom) Kelas A untuk pengisian sediaan steril, batas penerimaan kontaminasi mikroba pada cawan papar (settle plates diamater 90 mm) selama operasional adalah...",
+          options: [
+            "< 1 CFU (Colony Forming Unit) / cawan",
+            "Boleh sampai 50 CFU / cawan asalkan bukan kapang",
+            "Maksimal 100 CFU / cawan",
+            "Bebas tanpa batasan selama suhu ruangan di bawah 15°C"
+          ],
+          correct: 0,
+          explanation: "Pada area Kelas A (kondisi aseptis kritis untuk pengisian sediaan steril), batas cemaran mikroba udara adalah < 1 CFU per cawan papar, yang berarti wajib steril tanpa pertumbuhan mikroba.",
+          remedialTopic: "Standar Ruang Bersih (Cleanroom ISO 14644/CPOB) dan Monitoring Mikrobiologi Lingkungan"
+        }
+      ]
+    },
+    {
+      id: "kosmetik",
+      title: "Industri Kosmetik & Personal Care",
+      shortTitle: "Kosmetik & CPKB",
+      badge: "BPOM & ASEAN ACD",
+      icon: "sparkles",
+      colorType: "soft-blue",
+      leadDesc: "Regulasi Cara Pembuatan Kosmetika yang Baik (CPKB), sistem notifikasi BPOM, ASEAN Cosmetic Directive (ACD), pengujian bahan berbahaya (merkuri, hidrokuinon), dan uji stabilitas.",
+      regulators: ["BPOM RI (Deputi II)", "ASEAN Cosmetic Committee (ACC)", "BSN / ISO 22716"],
+      legalBasis: [
+        {
+          code: "PerBPOM No. 25 Tahun 2021",
+          title: "Penerapan Cara Pembuatan Kosmetika yang Baik (CPKB)",
+          desc: "Kewajiban sertifikasi aspek sanitasi, higiene, validasi proses, sistem penomoran batch, dan pengawasan mutu laboratorium kosmetik."
+        },
+        {
+          code: "PerBPOM No. 17 Tahun 2022",
+          title: "Persyaratan Teknis Bahan Kosmetika",
+          desc: "Daftar bahan yang diizinkan dengan pembatasan kadar, pengawet, tabir surya, serta daftar bahan dilarang dalam kosmetik."
+        },
+        {
+          code: "ASEAN Cosmetic Directive (ACD)",
+          title: "Harmonisasi Regulasi Kosmetik ASEAN",
+          desc: "Standar Dokumen Informasi Produk (DIP / Product Information File), klaim kosmetik, dan evaluasi keamanan bahan bagi konsumen."
+        },
+        {
+          code: "PerBPOM No. 12 Tahun 2020",
+          title: "Tata Cara Pengajuan Notifikasi Kosmetika",
+          desc: "Prosedur pendaftaran nomor izin edar (NA/NB/NC/ND) kosmetika lokal dan impor sebelum diedarkan ke pasar."
+        }
+      ],
+      coreParameters: [
+        {
+          param: "Merkuri (Hg) pada Sediaan Krim Pencerah",
+          instrument: "AAS Cold Vapor (CV-AAS) / ICP-MS",
+          standardRef: "PerBPOM No. 17/2022 / SNI 16-4399",
+          limitExample: "Bahan DILARANG KERAS. Batas cemaran teknis tidak disengaja (unavoidable trace): maks 1 mg/kg (1 ppm).",
+          importance: "Merkuri merusak pigmen melanin alami, memicu nefrotoksisitas ginjal, dan teratogenik pada janin."
+        },
+        {
+          param: "Hidrokuinon & Asam Retinoat",
+          instrument: "Kromatografi Cair Kinerja Tinggi (HPLC) Detektor DAD/UV",
+          standardRef: "Farmakope Indonesia / Standar Pengujian BPOM",
+          limitExample: "DILARANG KERAS dalam kosmetik bebas (hanya boleh dalam sediaan obat keras resep dokter).",
+          importance: "Penggunaan tanpa pengawasan memicu ochronosis (bercak biru-kehitaman permanen) dan fotosensitisasi parah."
+        },
+        {
+          param: "Pengawet (Paraben, Fenoksietanol)",
+          instrument: "HPLC Fase Terbalik (Reverse Phase C18)",
+          standardRef: "ASEAN Cosmetic Directive Annex VI",
+          limitExample: "Fenoksietanol: maks 1.0%; Methylparaben: maks 0.4% (tunggal) atau 0.8% (campuran paraben).",
+          importance: "Mencegah pertumbuhan mikroba selama masa simpan produk kosmetik tanpa mengiritasi kulit."
+        },
+        {
+          param: "Uji Stabilitas Dipercepat (Accelerated Stability)",
+          instrument: "Climatic Chamber (40°C ± 2°C, 75% RH ± 5% RH) selama 3-6 bulan",
+          standardRef: "ASEAN Guidelines on Stability Study of Drug / Cosmetics",
+          limitExample: "Evaluasi pH, viskositas, pemisahan fase emulsi, dan bau pada bulan 0, 1, 2, 3, dan 6.",
+          importance: "Menentukan perkiraan umur simpan (shelf-life) dan tanggal kedaluwarsa produk kosmetik."
+        }
+      ],
+      labChecklist: [
+        "Skrining Cepat KLT vs HPLC Konfirmasi: Uji skrining Kromatografi Lapis Tipis (KLT) dengan reagen semprot pewarna wajib dikonfirmasi dengan HPLC jika hasil positif.",
+        "Uji Kesesuaian Sistem (System Suitability Test): Sebelum running HPLC kuantitatif, pastikan nilai RSD area puncak standar ≤ 2.0% dan faktor tailing 0.8 - 1.5.",
+        "Challenge Test (Uji Efektivitas Pengawet): Lakukan inokulasi mikroba uji (S. aureus, P. aeruginosa, C. albicans) untuk membuktikan formula tahan kontaminasi konsumen.",
+        "Penyimpanan Retention Sample: Setiap batch produksi kosmetik wajib menyimpan sampel pertinggal minimal 1 tahun setelah tanggal kedaluwarsa."
+      ],
+      caseStudy: {
+        title: "Temuan Hidrokuinon Positif Palsu Akibat Oksidasi Ekstrak Bahan Alami",
+        problem: "Uji skrining KLT UV-Vis menunjukkan bercak noda yang sejajar dengan nilai Rf standar hidrokuinon pada serum pencerah wajah berbahan ekstrak beri.",
+        rootCause: "Kandungan arbutin alami dalam ekstrak tanaman mengalami hidrolisis parsial menjadi hidrokuinon selama preparasi sampel dengan asam kuat berlebih.",
+        solution: "Modifikasi preparasi sampel dengan ekstraksi netral tanpa asam panas dan konfirmasi dengan HPLC-DAD resolusi tinggi yang memisahkan puncak arbutin dan hidrokuinon murni."
+      ],
+      flashcards: [
+        { front: "Bolehkah senyawa Hidrokuinon digunakan pada krim pemutih yang dijual bebas?", back: "TIDAK BOLEH. Hidrokuinon dilarang keras dalam kosmetik dan hanya dapat diresepkan oleh dokter spesialis kulit sebagai obat keras." },
+        { front: "Apa arti kode NA pada nomor notifikasi kosmetik BPOM?", back: "NA menandakan produk kosmetika yang diproduksi atau berasal dari kawasan Asia (termasuk produk lokal Indonesia)." },
+        { front: "Berapa batas maksimal kadar pengawet Fenoksietanol menurut ASEAN Cosmetic Directive?", back: "Konsentrasi maksimal yang diizinkan adalah 1.0% (b/b) dalam sediaan kosmetik." }
+      ],
+      quiz: [
+        {
+          id: "k1",
+          question: "Berdasarkan Peraturan BPOM No. 17 Tahun 2022 dan ASEAN Cosmetic Directive, manakah pernyataan yang BENAR mengenai penggunaan Hidrokuinon dalam produk kosmetika bebas?",
+          options: [
+            "Boleh digunakan hingga kadar maksimal 5% pada semua krim malam bebas.",
+            "Dilarang keras digunakan dalam produk kosmetik yang dinotifikasi dan diedarkan secara bebas.",
+            "Boleh digunakan bebas asalkan dicampur dengan vitamin C dan parfum mawar.",
+            "Wajib digunakan sebagai pengawet utama pada semua sediaan tabir surya."
+          ],
+          correct: 1,
+          explanation: "Hidrokuinon masuk dalam daftar Annex II (Bahan Dilarang dalam Kosmetik). Senyawa ini hanya digolongkan sebagai obat keras yang wajib menggunakan resep dokter karena risiko efek samping ochronosis.",
+          remedialTopic: "Daftar Bahan Terlarang dalam Kosmetik (Annex II ASEAN Cosmetic Directive & BPOM)"
+        },
+        {
+          id: "k2",
+          question: "Dalam pengujian kestabilan sediaan emulsi kosmetik (krim pelembap), kondisi suhu dan kelembaban relatif standar pada Climatic Chamber untuk uji stabilitas dipercepat (Accelerated Testing) adalah...",
+          options: [
+            "Suhu 0°C dan kelembaban 10% RH",
+            "Suhu 40°C ± 2°C dan kelembaban 75% RH ± 5% RH",
+            "Suhu 80°C dan kelembaban 100% RH",
+            "Suhu ruangan bebas tanpa pengontrolan termometer"
+          ],
+          correct: 1,
+          explanation: "Kondisi zona iklim IVB (Indonesia / ASEAN) untuk uji stabilitas dipercepat adalah 40°C ± 2°C dengan kelembaban 75% RH ± 5% RH selama 3 sampai 6 bulan.",
+          remedialTopic: "Metodologi Uji Stabilitas Sediaan Kosmetik & Perkiraan Masa Kedaluwarsa (Shelf-Life)"
+        },
+        {
+          id: "k3",
+          question: "Pada nomor izin edar notifikasi BPOM sediaan kosmetik, contohnya kode 'BPOM NA18230104567', kode dua huruf pertama 'NA' merepresentasikan...",
+          options: [
+            "Kosmetik Non-Aman",
+            "Produk kosmetik yang berasal dari wilayah Asia (termasuk diproduksi lokal di Indonesia)",
+            "Produk buatan benua Amerika",
+            "Kategori kosmetik aroma natural"
+          ],
+          correct: 1,
+          explanation: "Sistem notifikasi kosmetik BPOM membagi wilayah: NA = Asia (termasuk Indonesia), NB = Australia, NC = Eropa, ND = Afrika, NE = Amerika.",
+          remedialTopic: "Sistem Notifikasi Kosmetik BPOM, Regulasi Izin Edar, dan Pembagian Kode Registrasi"
+        },
+        {
+          id: "k4",
+          question: "Dalam audit Cara Pembuatan Kosmetika yang Baik (CPKB) berdasarkan PerBPOM No. 25 Tahun 2021, apa tujuan utama dilakukannya 'Retain Sample' (Sampel Pertinggal) untuk setiap batch produksi?",
+          options: [
+            "Sebagai stok hadiah suvenir untuk tim pemasaran.",
+            "Untuk pengujian ulang bila terjadi keluhan konsumen (complaint) atau investigasi efek samping di masa edar produk.",
+            "Untuk dijual kembali saat perusahaan membutuhkan dana darurat.",
+            "Hanya untuk memenuhi pajangan lemari kantor laboratorium."
+          ],
+          correct: 1,
+          explanation: "Sampel pertinggal disimpan dalam kemasan akhir hingga 1 tahun melewati tanggal kedaluwarsa untuk memungkinkan re-analisis laboratorium jika timbul komplain kualitas atau efek yang tidak diinginkan di pasaran.",
+          remedialTopic: "Prinsip Dasar CPKB (Cara Pembuatan Kosmetika yang Baik) & Manajemen Mutu Batch"
+        },
+        {
+          id: "k5",
+          question: "Pengawet Fenoksietanol (Phenoxyethanol) sering dipilih formulator kosmetik untuk menggantikan paraben. Batas maksimal konsentrasi yang diperbolehkan menurut regulasi kosmetika adalah...",
+          options: [
+            "Maksimal 1.0%",
+            "Maksimal 15.0%",
+            "Bebas tanpa batasan maksimal",
+            "Hanya boleh 0.001%"
+          ],
+          correct: 0,
+          explanation: "Sesuai Annex VI ASEAN Cosmetic Directive dan PerBPOM, batas maksimum penggunaan Fenoksietanol sebagai pengawet pada sediaan kosmetika siap pakai adalah 1.0% (b/b).",
+          remedialTopic: "Regulasi Bahan Pengawet Kosmetik (Annex VI ACD) dan Batas Aman Toksikologi"
+        }
+      ]
+    },
+    {
+      id: "b3-k3",
+      title: "B3, Kimia Industri & K3 Laboratorium",
+      shortTitle: "B3 & K3 Laboratorium",
+      badge: "GHS & Permenaker 5/2018",
+      icon: "flame",
+      colorType: "soft-red",
+      leadDesc: "Klasifikasi Sistem Harmonisasi Global (GHS), 16 Bagian Safety Data Sheet (SDS/MSDS), matriks kompatibilitas penyimpanan bahan kimia reaktif, dan K3 lingkungan kerja lab.",
+      regulators: ["Kementerian Ketenagakerjaan (Kemenaker)", "Kementerian Perindustrian", "KLHK", "BNSP"],
+      legalBasis: [
+        {
+          code: "Permenperin No. 23 Tahun 2013",
+          title: "Sistem Harmonisasi Global (GHS) Klasifikasi dan Label Bahan Kimia",
+          desc: "Kewajiban pelabelan piktogram bahaya fisik, bahaya kesehatan, dan bahaya lingkungan pada setiap kemasan bahan kimia industri."
+        },
+        {
+          code: "Permenaker No. 5 Tahun 2018",
+          title: "K3 Lingkungan Kerja",
+          desc: "Penetapan Nilai Ambang Batas (NAB) faktor kimia di udara tempat kerja (TWA, STEL, Ceiling) untuk keselamatan analis dan operator."
+        },
+        {
+          code: "PP No. 74 Tahun 2001",
+          title: "Pengelolaan Bahan Berbahaya dan Beracun (B3)",
+          desc: "Klasifikasi B3 yang dapat dipergunakan, B3 yang dilarang, dan B3 yang terbatas dipergunakan serta kewajiban register B3."
+        },
+        {
+          code: "ISO 45001 & ISO/IEC 17025 Klausul K3",
+          title: "Sistem Manajemen K3 & Pengendalian Risiko Laboratorium",
+          desc: "Identifikasi bahaya, penilaian risiko (HIRADC), penyediaan spill kit, dan mitigasi kecelakaan kerja analis kimia."
+        }
+      ],
+      coreParameters: [
+        {
+          param: "Piktogram & Pelabelan GHS (9 Simbol Resmi)",
+          instrument: "Label tahan pelarut kimia, Standar GHS Rev 8 / Permenperin 23/2013",
+          standardRef: "UN GHS Purple Book / SNI GHS",
+          limitExample: "Bahan korosif (asam/basa pekat), mudah terbakar (titik nyala < 60°C), karsinogenik (tanda silang dada).",
+          importance: "Memberikan peringatan visual instan atas bahaya fisik dan kesehatan akut/kronis kepada analis di laboratorium."
+        },
+        {
+          param: "Safety Data Sheet (SDS / MSDS) 16 Bagian",
+          instrument: "Dokumentasi digital dan fisik yang wajib tersedia di area penyimpanan lab",
+          standardRef: "GHS Standardized 16-section SDS format",
+          limitExample: "Bagian 1: Identifikasi; Bagian 2: Bahaya; Bagian 4: P3K; Bagian 7: Penyimpanan; Bagian 8: APD/NAB.",
+          importance: "Rujukan mutlak saat terjadi tumpahan, percikan kimia ke mata, atau kebakaran reagen kimia."
+        },
+        {
+          param: "Nilai Ambang Batas (NAB / TLV) Uap Kimia di Ruang Lab",
+          instrument: "Gas Detector Multi-gas, Photoionization Detector (PID), Tabung absorbsi impinger",
+          standardRef: "Permenaker No. 5/2018 Lampiran Faktor Kimia",
+          limitExample: "Kloroform: NAB TWA 10 ppm; Asam Klorida (HCl): Ceiling 2 ppm; Toluena: TWA 20 ppm.",
+          importance: "Menjamin uap pelarut organik dari lemari asam tidak mencemari udara pernapasan analis lab."
+        },
+        {
+          param: "Matriks Kompatibilitas Penyimpanan Kimia",
+          instrument: "Safety cabinet tahan api (Flammable cabinet) & Corrosive cabinet (Polypropylene)",
+          standardRef: "NFPA 400 (Hazardous Materials Code) / OSHA 1910.1450",
+          limitExample: "Asam pekat TIDAK BOLEH disimpan bersama basa kuat atau pelarut organik mudah terbakar.",
+          importance: "Mencegah reaksi eksotermis hebat, ledakan gas bertekanan, atau pelepasan gas beracun ($Cl_2, NO_x$)."
+        }
+      ],
+      labChecklist: [
+        "Pemisahan Limbah Pelarut Berhalogen vs Non-Halogen: Sisa kloroform/diklorometana wajib ditampung di jeriken terpisah dari etanol/aseton.",
+        "Inspeksi Emergency Eyewash & Safety Shower: Uji aliran air bersih setiap minggu dan pastikan akses jalan menuju shower bebas halangan.",
+        "Penyimpanan Asam Pengoksidasi Kuat: Asam nitrat pekat ($HNO_3$) dan Asam perklorat ($HClO_4$) wajib dipisahkan dari bahan organik dan asam asetat glasial.",
+        "Pemeliharaan Fume Hood (Lemari Asam): Kecepatan aliran muka udara (face velocity) lemari asam harus dicek berkala minimal 0.4 - 0.6 m/s pada bukaan sash 30 cm."
+      ],
+      caseStudy: {
+        title: "Kecelakaan Pelepasan Gas Beracun Akibat Pencampuran Limbah Asam dan Sianida",
+        problem: "Seorang analis membuang sisa larutan uji sianida ke bak penampungan limbah asam tanpa membaca label.",
+        rootCause: "Terbentuknya gas hidrogen sianida ($HCN$) yang sangat mematikan dalam hitungan detik akibat kontak ion sianida dengan media asam ($pH < 4$).",
+        solution: "Limbah sianida wajib selalu diolah terpisah dalam kondisi basa kuat ($pH > 10$) dengan oksidasi natrium hipoklorit sebelum dibuang ke sistem pengelolaan B3."
+      ],
+      flashcards: [
+        { front: "Berapa jumlah bagian standar pada Safety Data Sheet (SDS) format GHS?", back: "16 Bagian terstandarisasi secara internasional (mulai dari Identifikasi Senyawa hingga Informasi Regulasi)." },
+        { front: "Apa yang dimaksud dengan nilai NAB KTD (Kadar Tertinggi Diperkenankan / Ceiling)?", back: "Konsentrasi zat kimia di udara tempat kerja yang TIDAK BOLEH dilampaui sama sekali walau hanya sesaat selama jam kerja." },
+        { front: "Mengapa asam nitrat pekat tidak boleh disimpan satu rak dengan pelarut aseton?", back: "Asam nitrat adalah oksidator kuat; kontak dengan pelarut organik mudah terbakar dapat memicu reaksi eksotermis dahsyat dan ledakan spontan." }
+      ],
+      quiz: [
+        {
+          id: "b1",
+          question: "Berdasarkan format Sistem Harmonisasi Global (GHS) dan Permenperin No. 23/2013, Lembar Data Keselamatan (Safety Data Sheet / SDS) terdiri dari berapa bagian wajib yang terstruktur?",
+          options: [
+            "5 bagian ringkas",
+            "8 bagian operasional",
+            "16 bagian terstandarisasi secara internasional",
+            "25 bagian teknis"
+          ],
+          correct: 2,
+          explanation: "Standar GHS menetapkan format SDS wajib 16 bagian, mencakup identifikasi bahaya, pertolongan pertama (P3K), penanganan tumpahan, penyimpanan kompatibel, APD, sifat fisik/kimiawi, hingga toksikologi.",
+          remedialTopic: "Struktur dan Isi 16 Bagian Safety Data Sheet (SDS / MSDS) Format GHS"
+        },
+        {
+          id: "b2",
+          question: "Dalam penataan ruang penyimpanan bahan kimia laboratorium (Chemical Storage), manakah pasangan bahan kimia berikut yang TIDAK BOLEH disimpan berdampingan dalam satu lemari karena inkompatibel dan memicu bahaya kebakaran/ledakan?",
+          options: [
+            "Natrium klorida ($NaCl$) dengan Natrium sulfat ($Na_2SO_4$)",
+            "Asam Nitrat pekat ($HNO_3$, oksidator kuat) dengan Etanol/Aseton (pelarut organik mudah terbakar)",
+            "Aquadest murni dengan Larutan buffer pH 7.0",
+            "Kertas saring dengan Rak tabung reaksi plastik"
+          ],
+          correct: 1,
+          explanation: "Asam nitrat pekat adalah oksidator kuat. Bila bercampur atau terjadi kebocoran uap kontak dengan bahan organik mudah terbakar seperti etanol atau aseton, dapat memicu ledakan eksotermis hebat.",
+          remedialTopic: "Matriks Kompatibilitas Penyimpanan Bahan Kimia Laboratorium & Pencegahan Bahaya Reaktivitas"
+        },
+        {
+          id: "b3",
+          question: "Sesuai Permenaker No. 5 Tahun 2018 tentang K3 Lingkungan Kerja, istilah 'Ceiling Value' atau Kadar Tertinggi Diperkenankan (KTD) didefinisikan sebagai...",
+          options: [
+            "Rata-rata konsentrasi paparan selama 8 jam kerja sehari.",
+            "Konsentrasi bahan kimia di udara tempat kerja yang tidak boleh dilampaui sama sekali selama berlangsungnya pekerjaan.",
+            "Kadar kimia maksimal yang boleh dibuang langsung ke sungai lingkungan tanpa diolah.",
+            "Batas konsentrasi minimum agar analis merasa segar di laboratorium."
+          ],
+          correct: 1,
+          explanation: "Ceiling Value (KTD) adalah konsentrasi tertinggi zat kimia berbahaya di udara tempat kerja yang tidak boleh dilampaui sedikit pun walau dalam durasi sekejap karena risiko toksisitas instan.",
+          remedialTopic: "Nilai Ambang Batas (NAB) Faktor Kimia: TWA, STEL, dan Ceiling Value (Permenaker 5/2018)"
+        },
+        {
+          id: "b4",
+          question: "Piktogram bahaya GHS berupa gambar 'siluet dada manusia dengan bintang ledakan putih di bagian dalam tubuh' merepresentasikan klasifikasi bahaya...",
+          options: [
+            "Bahan yang mudah meledak akibat gesekan fisik.",
+            "Bahaya Kesehatan Serius (Karsinogenik, Mutagenik, Toksisitas Reproduksi, atau Kerusakan Organ Sasaran Spesifik).",
+            "Bahan yang hanya berbau wangi bunga.",
+            "Gas bertekanan tinggi dalam silinder baja."
+          ],
+          correct: 1,
+          explanation: "Simbol siluet dada bintang (Health Hazard) menandakan bahaya kesehatan sistemik jangka panjang, termasuk karsinogenisitas (penyebab kanker), mutagenisitas sel nutfah, dan toksisitas organ vital sasaran.",
+          remedialTopic: "Piktogram Bahaya GHS dan Pengenalan Simbol Resiko Kesehatan Bahan Kimia"
+        },
+        {
+          id: "b5",
+          question: "Jika terjadi tumpahan asam klorida pekat ($HCl$) sebesar 500 mL di lantai laboratorium kimia, langkah penanganan awal (Spill Response) yang paling tepat menurut prosedur keselamatan kerja adalah...",
+          options: [
+            "Menyiram tumpahan dengan bensin agar cepat menguap.",
+            "Evakuasi personel sekitar, pasang APD lengkap (respirator uap asam & sarung tangan nitril tebal), netralkan tumpahan dengan absorben basa lemah seperti Natrium Bikarbonat ($NaHCO_3$), lalu bersihkan.",
+            "Meniup tumpahan asam menggunakan kipas angin ke arah jendela umum.",
+            "Mengabaikannya sampai mengering dengan sendirinya besok pagi."
+          ],
+          correct: 1,
+          explanation: "Penanganan tumpahan asam pekat wajib menggunakan APD pelindung uap asam korosif, membendung dengan pasir/absorben kimia, menetralkan dengan basa lemah ($NaHCO_3$ / kapur), dan membuang limbah netral ke tempat B3 resmi.",
+          remedialTopic: "Prosedur Penggunaan Spill Kit Kimiawi, Tanggap Darurat Tumpahan B3, dan APD Laboratorium"
+        }
+      ]
+    }
+  ]
+};
+
+</script>
+<script>
+/**
+ * I-Cheri (Industrial Chemistry Regulation Learning Hub)
+ * by Lia Indah
+ * Tagline: "Understand the standards, Build Laboratory Competence"
+ * Main Application Logic & Interactive State Engine
+ */
+
+(function () {
+  'use strict';
+
+  // Application State
+  const state = {
+    currentPage: 'home',
+    currentSectorId: 'pangan',
+    currentModuleTab: 'legal',
+    searchQuery: '',
+    // Quiz State
+    quizSectorId: 'pangan',
+    currentQuestionIndex: 0,
+    userAnswers: [], // array of { questionId, selectedIndex, isCorrect }
+    hasAnsweredCurrent: false,
+    learnerName: 'Peserta Pelatihan I-Cheri'
+  };
+
+  // Sound Engine (Web Audio API - Self Contained)
+  const soundEngine = {
+    ctx: null,
+    init() {
+      if (!this.ctx && (window.AudioContext || window.webkitAudioContext)) {
+        const AudioCtx = window.AudioContext || window.webkitAudioContext;
+        this.ctx = new AudioCtx();
+      }
+    },
+    playTone(freq, duration, type = 'sine', gainVal = 0.08) {
+      try {
+        this.init();
+        if (!this.ctx) return;
+        if (this.ctx.state === 'suspended') {
+          this.ctx.resume();
+        }
+        const osc = this.ctx.createOscillator();
+        const gain = this.ctx.createGain();
+        osc.type = type;
+        osc.frequency.setValueAtTime(freq, this.ctx.currentTime);
+        gain.gain.setValueAtTime(gainVal, this.ctx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.0001, this.ctx.currentTime + duration);
+        osc.connect(gain);
+        gain.connect(this.ctx.destination);
+        osc.start();
+        osc.stop(this.ctx.currentTime + duration);
+      } catch (e) {
+        // Silently skip if audio context restricted
+      }
+    },
+    playSuccess() {
+      this.playTone(523.25, 0.12, 'sine', 0.08); // C5
+      setTimeout(() => this.playTone(659.25, 0.25, 'sine', 0.08), 120); // E5
+    },
+    playError() {
+      this.playTone(280, 0.2, 'triangle', 0.09);
+    }
+  };
+
+  // SVG Icons Helper
+  const icons = {
+    utensils: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2v6a3 3 0 0 1-3 3 3 3 0 0 1-3-3V2"/><path d="M12 2v20"/><path d="M7 2v20"/><path d="M21 15V2v0a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></svg>`,
+    trees: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 10v.2A3 3 0 0 1 8.9 16H5a3 3 0 0 1-1-5.8V10a3 3 0 0 1 6 0Z"/><path d="M7 16v6"/><path d="M13 19v3"/><path d="M12 19h8.3a1 1 0 0 0 .7-1.7L18 14h.3a1 1 0 0 0 .7-1.7L16 9h.2a1 1 0 0 0 .8-1.7L13 3l-4 4.3a1 1 0 0 0 .8 1.7H10l-3 3.3a1 1 0 0 0 .7 1.7H8l-3 3.3a1 1 0 0 0 .7 1.7H12Z"/></svg>`,
+    pickaxe: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.531 4.268 19.732 9.47"/><path d="m14 8 2.29-2.29a3.25 3.25 0 0 0 0-4.6l-.1-.1a3.25 3.25 0 0 0-4.6 0l-.7.7"/><path d="M10.04 13.96 4.39 19.61a2.12 2.12 0 1 0 3 3l5.65-5.65"/><path d="m20.59 13.41-3-3a1 1 0 0 0-1.42 0l-4.24 4.24a1 1 0 0 0 0 1.42l3 3a1 1 0 0 0 1.42 0l4.24-4.24a1 1 0 0 0 0-1.42Z"/></svg>`,
+    microscope: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 18h8"/><path d="M3 22h18"/><path d="m14 22 .77-4.3A5 5 0 0 0 19 13V8a2 2 0 0 0-2-2h-1"/><path d="M9 14h2"/><path d="M9 12a2 2 0 0 1-2-2V6h6v4a2 2 0 0 1-2 2Z"/><path d="m12 6 1-4H7l1 4"/></svg>`,
+    sparkles: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/><path d="M5 3v4"/><path d="M19 17v4"/><path d="M3 5h4"/><path d="M17 19h4"/></svg>`,
+    flame: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>`,
+    check: `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>`,
+    arrowRight: `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>`,
+    award: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"/></svg>`
+  };
+
+  // DOM Elements
+  const pages = {
+    home: document.getElementById('page-home'),
+    sectors: document.getElementById('page-sectors'),
+    module: document.getElementById('page-module'),
+    quiz: document.getElementById('page-quiz'),
+    evaluation: document.getElementById('page-evaluation')
+  };
+
+  const stepperItems = document.querySelectorAll('.step-item');
+  const sectorsGrid = document.getElementById('sectors-grid');
+  const sectorSearchInput = document.getElementById('sector-search-input');
+  const sectorDropdown = document.getElementById('module-sector-dropdown');
+
+  // Navigation Logic
+  function navigateTo(pageId) {
+    if (!pages[pageId]) return;
+
+    state.currentPage = pageId;
+
+    // Toggle active page
+    Object.keys(pages).forEach((key) => {
+      if (key === pageId) {
+        pages[key].classList.add('active');
+      } else {
+        pages[key].classList.remove('active');
+      }
+    });
+
+    // Update stepper
+    const stepOrder = ['home', 'sectors', 'module', 'quiz', 'evaluation'];
+    const activeIndex = stepOrder.indexOf(pageId);
+
+    stepperItems.forEach((btn, idx) => {
+      btn.classList.remove('active', 'completed');
+      if (idx === activeIndex) {
+        btn.classList.add('active');
+      } else if (idx < activeIndex) {
+        btn.classList.add('completed');
+      }
+    });
+
+    // Page Specific Hooks
+    if (pageId === 'sectors') {
+      renderSectorsGrid();
+    } else if (pageId === 'module') {
+      renderModulePage(state.currentSectorId);
+    } else if (pageId === 'quiz') {
+      initQuiz(state.quizSectorId || state.currentSectorId);
+    }
+
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  // Render Sector Selection Grid (Page 2)
+  function renderSectorsGrid() {
+    if (!sectorsGrid) return;
+
+    const query = state.searchQuery.toLowerCase().trim();
+    const filtered = ICHEREI_DATA.sectors.filter((s) => {
+      if (!query) return true;
+      const matchTitle = s.title.toLowerCase().includes(query);
+      const matchDesc = s.leadDesc.toLowerCase().includes(query);
+      const matchReg = s.regulators.some((r) => r.toLowerCase().includes(query));
+      return matchTitle || matchDesc || matchReg;
+    });
+
+    if (filtered.length === 0) {
+      sectorsGrid.innerHTML = `
+        <div style="grid-column: 1 / -1; text-align: center; padding: 3rem 1rem;">
+          <div style="font-size: 2.5rem; margin-bottom: 0.5rem; color: var(--red-500);">🔍</div>
+          <h4 style="font-size: 1.2rem; font-weight: 700; color: var(--blue-900);">Tidak menemukan bidang regulasi yang cocok</h4>
+          <p style="color: var(--text-muted); font-size: 0.9rem;">Coba cari kata kunci lain seperti BPOM, KLHK, Tambang, Mikrobiologi, atau B3.</p>
+        </div>
+      `;
+      return;
+    }
+
+    sectorsGrid.innerHTML = filtered
+      .map((sector) => {
+        const isRed = sector.colorType === 'soft-red';
+        const iconSvg = icons[sector.icon] || icons.utensils;
+
+        return `
+        <div class="sector-card">
+          <div class="sector-card-header ${isRed ? 'soft-red-theme' : 'soft-blue-theme'}">
+            <div class="sector-badge-strip">
+              <span class="sector-badge ${isRed ? 'badge-red' : 'badge-blue'}">${sector.badge}</span>
+              <div class="sector-icon-wrap ${isRed ? 'icon-red' : 'icon-blue'}">
+                ${iconSvg}
+              </div>
+            </div>
+            <h3 class="sector-card-title">${sector.title}</h3>
+            <div class="sector-regulators">
+              ${sector.regulators.map((r) => `<span class="regulator-pill">${r}</span>`).join('')}
+            </div>
+          </div>
+          <div class="sector-card-body">
+            <p class="sector-desc">${sector.leadDesc}</p>
+            <ul class="sector-highlights">
+              <li>${icons.check} <span>Dasar Hukum & Peraturan Terkini</span></li>
+              <li>${icons.check} <span>Parameter Baku Mutu & Limit Uji Analitik</span></li>
+              <li>${icons.check} <span>Studi Kasus & Tindakan Korektif (CAPA)</span></li>
+            </ul>
+          </div>
+          <div class="sector-card-footer">
+            <button class="btn btn-soft-blue" onclick="window.ICHERI.openModule('${sector.id}')">
+              Pelajari Materi ${icons.arrowRight}
+            </button>
+            <button class="btn btn-soft-red" onclick="window.ICHERI.startQuizForSector('${sector.id}')">
+              Ikuti Kuis ✍️
+            </button>
+          </div>
+        </div>
+      `;
+      })
+      .join('');
+  }
+
+  // Render Detailed Module Page (Page 3)
+  function renderModulePage(sectorId) {
+    const sector = ICHEREI_DATA.sectors.find((s) => s.id === sectorId) || ICHEREI_DATA.sectors[0];
+    state.currentSectorId = sector.id;
+
+    // Update Dropdown value
+    if (sectorDropdown) {
+      sectorDropdown.value = sector.id;
+    }
+
+    // Header info
+    document.getElementById('module-title-text').textContent = sector.title;
+    document.getElementById('module-lead-text').textContent = sector.leadDesc;
+    document.getElementById('module-badge-tag').textContent = sector.badge;
+
+    // Tab 1: Dasar Hukum
+    const legalList = document.getElementById('module-legal-list');
+    if (legalList) {
+      legalList.innerHTML = sector.legalBasis
+        .map(
+          (leg) => `
+        <div class="legal-card">
+          <span class="legal-code-badge">${leg.code}</span>
+          <h4>${leg.title}</h4>
+          <p>${leg.desc}</p>
+        </div>
+      `
+        )
+        .join('');
+    }
+
+    // Tab 2: Parameter & Standar Uji
+    const paramsTbody = document.getElementById('module-params-tbody');
+    if (paramsTbody) {
+      paramsTbody.innerHTML = sector.coreParameters
+        .map(
+          (p) => `
+        <tr>
+          <td>
+            <div class="param-name">${p.param}</div>
+            <div class="param-instrument">${p.instrument}</div>
+          </td>
+          <td>
+            <strong style="color: var(--blue-800); font-size: 0.88rem;">${p.standardRef}</strong>
+          </td>
+          <td>
+            <span class="limit-badge">${p.limitExample}</span>
+          </td>
+          <td style="color: var(--text-muted); font-size: 0.88rem;">
+            ${p.importance}
+          </td>
+        </tr>
+      `
+        )
+        .join('');
+    }
+
+    // Tab 3: Lab Checklist (GLP)
+    const checklistWrap = document.getElementById('module-checklist-wrap');
+    if (checklistWrap) {
+      checklistWrap.innerHTML = sector.labChecklist
+        .map(
+          (chk, idx) => `
+        <div class="checklist-card">
+          <div class="check-icon-circle">${idx + 1}</div>
+          <p>${chk}</p>
+        </div>
+      `
+        )
+        .join('');
+    }
+
+    // Tab 4: Studi Kasus
+    const caseWrap = document.getElementById('module-case-wrap');
+    if (caseWrap && sector.caseStudy) {
+      caseWrap.innerHTML = `
+        <div class="case-study-card">
+          <div class="case-study-title">
+            <span style="font-size: 1.5rem; color: var(--red-500);">📋</span>
+            <span>${sector.caseStudy.title}</span>
+          </div>
+          <div class="case-grid">
+            <div class="case-box problem">
+              <div class="case-box-header">⚠️ Permasalahan / Kasus</div>
+              <p>${sector.caseStudy.problem}</p>
+            </div>
+            <div class="case-box root-cause">
+              <div class="case-box-header">🔍 Akar Penyebab (Root Cause)</div>
+              <p>${sector.caseStudy.rootCause}</p>
+            </div>
+            <div class="case-box solution">
+              <div class="case-box-header">🛡️ Tindakan Korektif (CAPA)</div>
+              <p>${sector.caseStudy.solution}</p>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    // Tab 5: Flashcards
+    const flashWrap = document.getElementById('module-flashcards-wrap');
+    if (flashWrap) {
+      flashWrap.innerHTML = sector.flashcards
+        .map(
+          (card, idx) => `
+        <div class="flashcard" onclick="this.classList.toggle('flipped')">
+          <div class="flashcard-inner">
+            <div class="flashcard-front">
+              <span class="tag">Poin Penting #${idx + 1}</span>
+              <h4>${card.front}</h4>
+              <span class="click-hint">Klik kartu untuk melihat jawaban 🔄</span>
+            </div>
+            <div class="flashcard-back">
+              <p>${card.back}</p>
+              <span class="click-hint" style="color: rgba(255,255,255,0.8); margin-top: 1rem;">Klik untuk membalik lagi</span>
+            </div>
+          </div>
+        </div>
+      `
+        )
+        .join('');
+    }
+
+    // Set first sub-tab active
+    switchModuleTab(state.currentModuleTab || 'legal');
+  }
+
+  // Switch Module Sub-Tabs (Page 3)
+  function switchModuleTab(tabName) {
+    state.currentModuleTab = tabName;
+    const tabButtons = document.querySelectorAll('.module-tabs .tab-btn');
+    const tabPanels = document.querySelectorAll('.tab-panel');
+
+    tabButtons.forEach((btn) => {
+      if (btn.dataset.tab === tabName) {
+        btn.classList.add('active');
+      } else {
+        btn.classList.remove('active');
+      }
+    });
+
+    tabPanels.forEach((panel) => {
+      if (panel.id === `tab-panel-${tabName}`) {
+        panel.classList.add('active');
+      } else {
+        panel.classList.remove('active');
+      }
+    });
+  }
+
+  // ========================================================
+  // QUIZ ENGINE (Page 4)
+  // ========================================================
+  function initQuiz(sectorId) {
+    const sector = ICHEREI_DATA.sectors.find((s) => s.id === sectorId) || ICHEREI_DATA.sectors[0];
+    state.quizSectorId = sector.id;
+    state.currentQuestionIndex = 0;
+    state.userAnswers = [];
+    state.hasAnsweredCurrent = false;
+
+    document.getElementById('quiz-sector-name').textContent = sector.title;
+    renderCurrentQuestion();
+  }
+
+  function renderCurrentQuestion() {
+    const sector = ICHEREI_DATA.sectors.find((s) => s.id === state.quizSectorId);
+    const questions = sector.quiz;
+    const q = questions[state.currentQuestionIndex];
+    state.hasAnsweredCurrent = false;
+
+    // Progress
+    const totalQ = questions.length;
+    const currentQNum = state.currentQuestionIndex + 1;
+    document.getElementById('quiz-progress-text').textContent = `Pertanyaan ${currentQNum} dari ${totalQ}`;
+    const fillPercent = ((currentQNum - 1) / totalQ) * 100;
+    document.getElementById('quiz-progress-fill').style.width = `${fillPercent}%`;
+
+    // Question Text
+    document.getElementById('quiz-q-number').textContent = `Soal Kasus #${currentQNum}`;
+    document.getElementById('quiz-q-text').textContent = q.question;
+
+    // Options
+    const optionsContainer = document.getElementById('quiz-options-list');
+    const letters = ['A', 'B', 'C', 'D'];
+    optionsContainer.innerHTML = q.options
+      .map(
+        (opt, idx) => `
+      <div class="option-item" data-index="${idx}" onclick="window.ICHERI.selectQuizOption(${idx})">
+        <div class="option-marker">${letters[idx]}</div>
+        <div class="option-label">${opt}</div>
+      </div>
+    `
+      )
+      .join('');
+
+    // Hide feedback box
+    const feedbackBox = document.getElementById('quiz-feedback-box');
+    feedbackBox.className = 'quiz-feedback-box';
+    feedbackBox.innerHTML = '';
+
+    // Next Button state
+    const nextBtn = document.getElementById('quiz-next-btn');
+    nextBtn.disabled = true;
+    nextBtn.style.opacity = '0.5';
+    nextBtn.style.cursor = 'not-allowed';
+    nextBtn.innerHTML =
+      currentQNum === totalQ
+        ? `Selesai & Evaluasi Hasil ${icons.arrowRight}`
+        : `Pertanyaan Selanjutnya ${icons.arrowRight}`;
+  }
+
+  function selectQuizOption(selectedIndex) {
+    if (state.hasAnsweredCurrent) return; // Prevent double click
+
+    state.hasAnsweredCurrent = true;
+    const sector = ICHEREI_DATA.sectors.find((s) => s.id === state.quizSectorId);
+    const q = sector.quiz[state.currentQuestionIndex];
+    const isCorrect = selectedIndex === q.correct;
+
+    // Record answer
+    state.userAnswers.push({
+      questionId: q.id,
+      questionText: q.question,
+      options: q.options,
+      selectedIndex: selectedIndex,
+      correctIndex: q.correct,
+      isCorrect: isCorrect,
+      explanation: q.explanation,
+      remedialTopic: q.remedialTopic
+    });
+
+    // Update UI Options classes
+    const optionElements = document.querySelectorAll('.option-item');
+    optionElements.forEach((el, idx) => {
+      el.classList.add('disabled');
+      if (idx === q.correct) {
+        el.classList.add('correct');
+      }
+      if (idx === selectedIndex && !isCorrect) {
+        el.classList.add('wrong');
+      }
+    });
+
+    // Sound effect
+    if (isCorrect) {
+      soundEngine.playSuccess();
+    } else {
+      soundEngine.playError();
+    }
+
+    // Show Feedback Box
+    const feedbackBox = document.getElementById('quiz-feedback-box');
+    feedbackBox.classList.add('show', isCorrect ? 'correct' : 'wrong');
+    feedbackBox.innerHTML = `
+      <div class="feedback-status">
+        ${isCorrect ? '✅ Jawaban Anda Tepat!' : '❌ Jawaban Kurang Tepat'}
+      </div>
+      <div class="feedback-explanation">
+        ${q.explanation}
+      </div>
+    `;
+
+    // Enable Next button
+    const nextBtn = document.getElementById('quiz-next-btn');
+    nextBtn.disabled = false;
+    nextBtn.style.opacity = '1';
+    nextBtn.style.cursor = 'pointer';
+
+    // Update progress fill
+    const totalQ = sector.quiz.length;
+    const fillPercent = ((state.currentQuestionIndex + 1) / totalQ) * 100;
+    document.getElementById('quiz-progress-fill').style.width = `${fillPercent}%`;
+  }
+
+  function handleNextQuestion() {
+    const sector = ICHEREI_DATA.sectors.find((s) => s.id === state.quizSectorId);
+    if (state.currentQuestionIndex < sector.quiz.length - 1) {
+      state.currentQuestionIndex++;
+      renderCurrentQuestion();
+    } else {
+      // Quiz finished -> Go to Page 5 Evaluation
+      renderEvaluationPage();
+      navigateTo('evaluation');
+    }
+  }
+
+  // ========================================================
+  // EVALUATION & REMEDIAL GAP ANALYSIS (Page 5)
+  // ========================================================
+  function renderEvaluationPage() {
+    const sector = ICHEREI_DATA.sectors.find((s) => s.id === state.quizSectorId);
+    const total = state.userAnswers.length;
+    const correctCount = state.userAnswers.filter((a) => a.isCorrect).length;
+    const scorePercent = Math.round((correctCount / total) * 100);
+
+    // Summary Score
+    document.getElementById('eval-score-num').textContent = `${scorePercent}%`;
+    document.getElementById('eval-stat-total').textContent = total;
+    document.getElementById('eval-stat-correct').textContent = correctCount;
+    document.getElementById('eval-stat-wrong').textContent = total - correctCount;
+
+    // Competency Badge & Status
+    const badgeEl = document.getElementById('eval-competence-badge');
+    const headlineEl = document.getElementById('eval-headline');
+    const subheadlineEl = document.getElementById('eval-subheadline');
+
+    if (scorePercent >= 80) {
+      badgeEl.className = 'competence-badge badge-proficient';
+      badgeEl.textContent = 'Kompeten - Standar Regulasi Dikuasai';
+      headlineEl.textContent = 'Luar Biasa! Pemahaman Regulasi Anda Sangat Kuat';
+      subheadlineEl.textContent = `Anda telah mendemonstrasikan penguasaan kaidah standar mutu dan regulasi laboratorium industri pada bidang ${sector.title}.`;
+    } else if (scorePercent >= 60) {
+      badgeEl.className = 'competence-badge badge-need-improvement';
+      badgeEl.textContent = 'Cukup Kompeten - Perlu Penguatan Standar';
+      headlineEl.textContent = 'Pemahaman Baik, Namun Terdapat Parameter Kritis yang Perlu Diperkuat';
+      subheadlineEl.textContent = `Beberapa batasan hukum atau teknik analisis masih terlewat. Pelajari poin rekomendasi remedial di bawah ini untuk menutup celah kompetensi.`;
+    } else {
+      badgeEl.className = 'competence-badge badge-need-improvement';
+      badgeEl.textContent = 'Perlu Remedial & Pemahaman Ulang Standar';
+      headlineEl.textContent = 'Perhatian: Regulasi Kritis Belum Dipahami Secara Menyeluruh';
+      subheadlineEl.textContent = `Regulasi laboratorium industri bersifat mengikat dan wajib dipatuhi. Simak panduan belajar ulang di bawah untuk memahami dasar hukum dan baku mutu yang benar.`;
+    }
+
+    // "Apa yang Perlu Dipelajari Ulang" (Remedial Gap Analysis)
+    const remedialWrap = document.getElementById('eval-remedial-section');
+    const remedialList = document.getElementById('eval-remedial-list');
+    const wrongAnswers = state.userAnswers.filter((a) => !a.isCorrect);
+
+    if (wrongAnswers.length === 0) {
+      remedialWrap.style.display = 'none';
+    } else {
+      remedialWrap.style.display = 'block';
+      remedialList.innerHTML = wrongAnswers
+        .map(
+          (ans, idx) => `
+        <div class="remedial-card">
+          <div class="remedial-card-content">
+            <h5>📌 Topik Remedial #${idx + 1}: ${ans.remedialTopic}</h5>
+            <p><strong>Celah Pemahaman:</strong> Anda memilih opsi jawaban yang belum sesuai pada kasus uji laboratorium.</p>
+            <p><strong>Dasar Regulasi yang Benar:</strong> ${ans.explanation}</p>
+          </div>
+          <button class="btn btn-soft-red btn-sm" onclick="window.ICHERI.openModule('${sector.id}')" style="align-self: center; white-space: nowrap;">
+            Pelajari Ulang Materi
+          </button>
+        </div>
+      `
+        )
+        .join('');
+    }
+
+    // Detailed Review of Each Question
+    const breakdownList = document.getElementById('eval-breakdown-list');
+    breakdownList.innerHTML = state.userAnswers
+      .map((ans, idx) => {
+        const letters = ['A', 'B', 'C', 'D'];
+        const userChoiceLetter = letters[ans.selectedIndex];
+        const correctChoiceLetter = letters[ans.correctIndex];
+        const isRight = ans.isCorrect;
+
+        return `
+        <div class="qa-review-item ${isRight ? 'is-correct' : 'is-wrong'}">
+          <div class="qa-header">
+            <span style="font-weight: 700; color: var(--text-muted); font-size: 0.82rem;">Soal #${idx + 1}</span>
+            <span class="qa-status-tag ${isRight ? 'correct' : 'wrong'}">
+              ${isRight ? 'Benar ✅' : 'Salah ❌'}
+            </span>
+          </div>
+          <div class="qa-q-text">${ans.questionText}</div>
+          <div class="qa-user-answer ${isRight ? '' : 'wrong-ans'}">
+            Jawaban Anda: <span>[${userChoiceLetter}] ${ans.options[ans.selectedIndex]}</span>
+          </div>
+          ${
+            !isRight
+              ? `<div class="qa-correct-answer">Kunci Jawaban yang Benar: <span>[${correctChoiceLetter}] ${ans.options[ans.correctIndex]}</span></div>`
+              : ''
+          }
+          <div class="qa-explanation-box">
+            💡 <strong>Rujukan Regulasi:</strong> ${ans.explanation}
+          </div>
+        </div>
+      `;
+      })
+      .join('');
+
+    // Sector Name on Eval Title
+    document.getElementById('eval-sector-title').textContent = sector.title;
+  }
+
+  // Certificate Modal Logic
+  function openCertificateModal() {
+    const sector = ICHEREI_DATA.sectors.find((s) => s.id === state.quizSectorId);
+    const correctCount = state.userAnswers.filter((a) => a.isCorrect).length;
+    const total = state.userAnswers.length || 5;
+    const score = Math.round((correctCount / total) * 100);
+
+    const nameInput = prompt(
+      'Masukkan Nama Lengkap Anda untuk dicetak pada Kartu Evaluasi Kompetensi I-Cheri:',
+      state.learnerName
+    );
+    if (nameInput && nameInput.trim()) {
+      state.learnerName = nameInput.trim();
+    }
+
+    document.getElementById('cert-user-name').textContent = state.learnerName;
+    document.getElementById('cert-sector-name').textContent = sector.title;
+    document.getElementById('cert-score-text').textContent = `Skor Evaluasi Kompetensi: ${score}% (${correctCount}/${total} Soal Terjawab Benar)`;
+    document.getElementById('cert-date-text').textContent = new Date().toLocaleDateString('id-ID', {
+      day: 'numeric',
+      month: 'long',
+      year: 'numeric'
+    });
+
+    document.getElementById('certificate-modal').classList.add('open');
+  }
+
+  function closeCertificateModal() {
+    document.getElementById('certificate-modal').classList.remove('open');
+  }
+
+  // Populate Dropdown for Quick Switching
+  function setupSectorDropdown() {
+    if (!sectorDropdown) return;
+    sectorDropdown.innerHTML = ICHEREI_DATA.sectors
+      .map((s) => `<option value="${s.id}">${s.title}</option>`)
+      .join('');
+
+    sectorDropdown.addEventListener('change', (e) => {
+      renderModulePage(e.target.value);
+    });
+  }
+
+  // Global Event Listeners Setup
+  function setupListeners() {
+    // Search input
+    if (sectorSearchInput) {
+      sectorSearchInput.addEventListener('input', (e) => {
+        state.searchQuery = e.target.value;
+        renderSectorsGrid();
+      });
+    }
+
+    // Filter Buttons on Page 2
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    filterButtons.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        filterButtons.forEach((b) => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filterTag = btn.dataset.filter || '';
+        state.searchQuery = filterTag;
+        if (sectorSearchInput) sectorSearchInput.value = filterTag;
+        renderSectorsGrid();
+      });
+    });
+
+    // Sub-tab clicks on Module page
+    const moduleTabBtns = document.querySelectorAll('.module-tabs .tab-btn');
+    moduleTabBtns.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        switchModuleTab(btn.dataset.tab);
+      });
+    });
+
+    // Stepper header buttons
+    stepperItems.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const targetPage = btn.dataset.step;
+        if (targetPage) navigateTo(targetPage);
+      });
+    });
+
+    // Quiz next button
+    const quizNextBtn = document.getElementById('quiz-next-btn');
+    if (quizNextBtn) {
+      quizNextBtn.addEventListener('click', handleNextQuestion);
+    }
+  }
+
+  // Expose Global API for inline HTML handlers
+  window.ICHERI = {
+    state,
+    navigateTo,
+    openModule(sectorId) {
+      state.currentSectorId = sectorId || state.currentSectorId || 'pangan';
+      navigateTo('module');
+    },
+    startQuizForSector(sectorId) {
+      state.quizSectorId = sectorId || state.currentSectorId || 'pangan';
+      navigateTo('quiz');
+    },
+    switchModuleTab,
+    selectQuizOption,
+    openCertificateModal,
+    closeCertificateModal,
+    printCertificate() {
+      window.print();
+    }
+  };
+
+  // Initialization on DOM Ready
+  document.addEventListener('DOMContentLoaded', () => {
+    setupSectorDropdown();
+    setupListeners();
+    renderSectorsGrid();
+    navigateTo('home');
+  });
+})();
+
+</script>
+</body>
+</html>
